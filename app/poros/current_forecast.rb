@@ -11,7 +11,7 @@ class CurrentForecast
               :icon
 
   def initialize(info)
-    @datetime = info[:dt]
+    @datetime = Time.at(info[:dt]).to_s
     @sunrise = info[:sunrise]
     @sunset = info[:sunset]
     @temperature = info[:temp]

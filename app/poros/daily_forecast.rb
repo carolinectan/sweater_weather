@@ -8,7 +8,7 @@ class DailyForecast
               :icon
 
   def initialize(info)
-    @date = info[:dt]
+    @date = Time.at(info[:dt]).to_s
     @sunrise = info[:sunrise]
     @sunset = info[:sunset]
     @max_temp = info[:temp][:max]
