@@ -8,6 +8,7 @@ describe 'Weather API' do
     get '/api/v1/forecast', headers: headers, params: location
 
     expect(response).to be_successful
+    expect(response.status).to eq(200)
 
     forecast = JSON.parse(response.body, symbolize_names: true)
 
