@@ -97,4 +97,49 @@ describe 'Weather API' do
       expect(hourly_weather).to_not have_key(:visibility)
     end
   end
+
+  it 'sends the background image for a city', :vcr do
+    location = { location: 'denver,co' }
+    headers = { 'CONTENT_TYPE': 'application/json', 'Accept': 'application/json' }
+
+    get '/api/v1/backgrounds', headers: headers, params: location
+
+    expect(response).to be_successful
+    expect(response.status).to eq(200)
+
+    # forecast = JSON.parse(response.body, symbolize_names: true)
+    #
+    # expect(forecast).to be_a Hash
+    # expect(forecast[:data]).to have_key(:id)
+    # expect(forecast[:data][:id]).to eq(nil)
+
+    #  An example of a response COULD look something like this:
+    # status: 200
+    # body:
+    #
+    # {
+    #   "data": {
+    #     "type": "image",
+    #     "id": null,
+    #     "attributes": {
+    #       "image": {
+    #         "location": "denver,co",
+    #         "image_url": "https://pixabay.com/get/54e6d4444f50a814f1dc8460962930761c38d6ed534c704c7c2878dd954dc451_640.jpg",
+    #         "credit": {
+    #           "source": "pixabay.com",
+    #           "author": "quinntheislander",
+    #           "logo": "https://pixabay.com/static/img/logo_square.png"
+    #         }
+    #       }
+    #     }
+    #   }
+    # }
+    # Requirements:
+    #
+    # Implement a new API service (Unsplash, Pexels, Microsoft Bing Image search, Wikimedia image search, Flickr and more) to use the name of the city to get the URL of an appropriate background image. (we don’t recommend pixabay, it has a very limited image search, it’s only for an example above!)
+    # Please read the terms of use of your image provider about giving credit for the search results, and put appropriate content in the response!!
+    # Extension:
+    #
+    # Determine the time of day and current weather and include that in your search; for example, searching for “denver evening snow” might return a far more interesting result
+  end
 end
