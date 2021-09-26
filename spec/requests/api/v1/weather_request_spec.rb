@@ -43,6 +43,10 @@ describe 'Weather API' do
     expect(forecast[:data][:attributes][:current_weather]).to have_key(:icon)
     expect(forecast[:data][:attributes][:current_weather][:icon]).to be_a String
 
+    expect(forecast[:data][:attributes][:current_weather]).to_not have_key(:date)
+    expect(forecast[:data][:attributes][:current_weather]).to_not have_key(:max_temp)
+    expect(forecast[:data][:attributes][:current_weather]).to_not have_key(:min_temp)
+
     # array of the next 5 days of daily weather data
     expect(forecast[:data][:attributes]).to have_key(:daily_weather)
     expect(forecast[:data][:attributes][:daily_weather].length).to eq(5)
@@ -61,6 +65,13 @@ describe 'Weather API' do
       expect(daily_weather[:conditions]).to be_a String
       expect(daily_weather).to have_key(:icon)
       expect(daily_weather[:icon]).to be_a String
+
+      expect(daily_weather).to_not have_key(:datetime)
+      expect(daily_weather).to_not have_key(:temperature)
+      expect(daily_weather).to_not have_key(:feels_like)
+      expect(daily_weather).to_not have_key(:humidity)
+      expect(daily_weather).to_not have_key(:uvi)
+      expect(daily_weather).to_not have_key(:visibility)
     end
 
     # array of the next 8 hours of hourly weather data
@@ -75,6 +86,15 @@ describe 'Weather API' do
       expect(hourly_weather[:conditions]).to be_a String
       expect(hourly_weather).to have_key(:icon)
       expect(hourly_weather[:icon]).to be_a String
+
+      expect(hourly_weather).to_not have_key(:datetime)
+      expect(hourly_weather).to_not have_key(:sunrise)
+      expect(hourly_weather).to_not have_key(:sunset)
+      expect(hourly_weather).to_not have_key(:feels_like)
+      expect(hourly_weather).to_not have_key(:humidity)
+      expect(hourly_weather).to_not have_key(:sunset)
+      expect(hourly_weather).to_not have_key(:uvi)
+      expect(hourly_weather).to_not have_key(:visibility)
     end
   end
 end
