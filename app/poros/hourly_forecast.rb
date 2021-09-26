@@ -8,6 +8,6 @@ class HourlyForecast
     @time = Time.at(info[:dt]).to_s
     @temperature = info[:temp]
     @conditions = info[:weather].first[:description]
-    @icon = info[:icon]
+    @icon = info[:weather].first[:icon]
   end
 end
