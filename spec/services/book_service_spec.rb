@@ -23,7 +23,7 @@ RSpec.describe BookService do
         expect(books).to have_key(:offset)
         expect(books[:offset]).to eq(nil)
 
-        # note: keys may return nil for some books
+        # Note: Some keys may not exist for some books
         books[:docs].first do |book|
           expect(book).to have_key(:key)
           expect(book[:key]).to be_a String
