@@ -4,6 +4,6 @@ class Book
   def initialize(info)
     @isbn = info[:isbn] # array of 2 strings
     @title = info[:title] # string
-    @publisher = info[:publisher] # arroy of 1 string
+    @publisher = info[:publisher] # array of 1 string
   end
 end
