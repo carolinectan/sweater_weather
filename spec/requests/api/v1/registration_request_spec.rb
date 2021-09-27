@@ -6,9 +6,9 @@ describe 'Registration API' do
     # In Postman, send the request in the body.
     # In RSpec, send the request as a param.
     request_body = {
-      "email": "whatever@example.com",
-      "password": "password",
-      "password_confirmation": "password"
+      "email": 'whatever@example.com',
+      "password": 'password',
+      "password_confirmation": 'password'
     }.to_json
 
     post '/api/v1/users', headers: headers, params: request_body
@@ -33,7 +33,6 @@ describe 'Registration API' do
 
     expect(user[:data]).to_not have_key(:password)
     expect(user[:data][:attributes]).to_not have_key(:password)
-
 
     # body:
     # {

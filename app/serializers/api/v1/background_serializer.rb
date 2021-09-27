@@ -5,13 +5,13 @@ class Api::V1::BackgroundSerializer
     {
       "data": {
         "id": nil,
-        "type": "image",
+        "type": 'image',
         "attributes": {
           "image": {
             "description": {
               "description": background.description,
               "alt_description": background.alt_description,
-              "location": location,
+              "location": location
             },
             "image_url": background.image_url,
             "credit": {
@@ -20,7 +20,7 @@ class Api::V1::BackgroundSerializer
               "profile": background.profile_url,
               "logo": background.logo,
               "utm_source": background.utm_source,
-              "utm_medium": background.utm_medium,
+              "utm_medium": background.utm_medium
             }
           }
         }

@@ -5,7 +5,7 @@ class Api::V1::ForecastSerializer
     {
       "data": {
         "id": nil,
-        "type": "forecast",
+        "type": 'forecast',
         "attributes": {
           "current_weather": {
             "datetime": forecast.current.datetime,

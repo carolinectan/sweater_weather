@@ -3,8 +3,8 @@ class Api::V1::BookSerializer
     null = nil
     {
       "data": {
-        "id": "null",
-        "type": "books",
+        "id": 'null',
+        "type": 'books',
         "attributes": {
           "destination": location,
           "forecast": {
