@@ -35,7 +35,7 @@ describe 'Weather API' do
     expect(forecast[:data][:attributes][:current_weather]).to have_key(:humidity)
     expect(forecast[:data][:attributes][:current_weather][:humidity]).to be_an Integer
     expect(forecast[:data][:attributes][:current_weather]).to have_key(:uvi)
-    expect(forecast[:data][:attributes][:current_weather][:uvi]).to be_a Float
+    expect(forecast[:data][:attributes][:current_weather][:uvi]).to be_a Numeric
     expect(forecast[:data][:attributes][:current_weather]).to have_key(:visibility)
     expect(forecast[:data][:attributes][:current_weather][:visibility]).to be_an Integer
     expect(forecast[:data][:attributes][:current_weather]).to have_key(:conditions)
@@ -107,39 +107,44 @@ describe 'Weather API' do
     expect(response).to be_successful
     expect(response.status).to eq(200)
 
-    # forecast = JSON.parse(response.body, symbolize_names: true)
-    #
-    # expect(forecast).to be_a Hash
-    # expect(forecast[:data]).to have_key(:id)
-    # expect(forecast[:data][:id]).to eq(nil)
+    background = JSON.parse(response.body, symbolize_names: true)
 
-    #  An example of a response COULD look something like this:
-    # status: 200
-    # body:
-    #
-    # {
-    #   "data": {
-    #     "type": "image",
-    #     "id": null,
-    #     "attributes": {
-    #       "image": {
-    #         "location": "denver,co",
-    #         "image_url": "https://pixabay.com/get/54e6d4444f50a814f1dc8460962930761c38d6ed534c704c7c2878dd954dc451_640.jpg",
-    #         "credit": {
-    #           "source": "pixabay.com",
-    #           "author": "quinntheislander",
-    #           "logo": "https://pixabay.com/static/img/logo_square.png"
-    #         }
-    #       }
-    #     }
-    #   }
-    # }
-    # Requirements:
-    #
-    # Implement a new API service (Unsplash, Pexels, Microsoft Bing Image search, Wikimedia image search, Flickr and more) to use the name of the city to get the URL of an appropriate background image. (we don’t recommend pixabay, it has a very limited image search, it’s only for an example above!)
-    # Please read the terms of use of your image provider about giving credit for the search results, and put appropriate content in the response!!
+    expect(background).to be_a Hash
+    expect(background[:data]).to have_key(:id)
+    expect(background[:data][:id]).to eq(nil)
+    expect(background[:data]).to have_key(:type)
+    expect(background[:data][:type]).to eq('image')
+    expect(background[:data]).to have_key(:attributes)
+    expect(background[:data][:attributes].length).to eq(1)
+
+    expect(background[:data][:attributes][:image].length).to eq(3)
+
+    expect(background[:data][:attributes][:image]).to have_key(:description)
+    expect(background[:data][:attributes][:image][:description].length).to eq(3)
+    expect(background[:data][:attributes][:image][:description]).to have_key(:description)
+    expect(background[:data][:attributes][:image][:description][:description]).to be_a String
+    expect(background[:data][:attributes][:image][:description]).to have_key(:alt_description)
+    expect(background[:data][:attributes][:image][:description][:alt_description]).to be_a String
+    expect(background[:data][:attributes][:image][:description]).to have_key(:location)
+    expect(background[:data][:attributes][:image][:description][:location]).to be_a String
+    expect(background[:data][:attributes][:image]).to have_key(:image_url)
+    expect(background[:data][:attributes][:image][:image_url]).to be_a String
+    expect(background[:data][:attributes][:image][:credit].length).to eq(6)
+    expect(background[:data][:attributes][:image][:credit]).to have_key(:source)
+    expect(background[:data][:attributes][:image][:credit][:source]).to be_a String
+    expect(background[:data][:attributes][:image][:credit]).to have_key(:photographer)
+    expect(background[:data][:attributes][:image][:credit][:photographer]).to be_a String
+    expect(background[:data][:attributes][:image][:credit]).to have_key(:profile)
+    expect(background[:data][:attributes][:image][:credit][:profile]).to be_a String
+    expect(background[:data][:attributes][:image][:credit]).to have_key(:logo)
+    expect(background[:data][:attributes][:image][:credit][:logo]).to be_a String
+    expect(background[:data][:attributes][:image][:credit]).to have_key(:utm_source)
+    expect(background[:data][:attributes][:image][:credit][:utm_source]).to be_a String
+    expect(background[:data][:attributes][:image][:credit]).to have_key(:utm_medium)
+    expect(background[:data][:attributes][:image][:credit][:utm_medium]).to be_a String
+
     # Extension:
-    #
-    # Determine the time of day and current weather and include that in your search; for example, searching for “denver evening snow” might return a far more interesting result
+    # Determine the time of day and current weather and include that in your search;
+    # for example, searching for “denver evening snow” might return a far more interesting result
   end
 end
