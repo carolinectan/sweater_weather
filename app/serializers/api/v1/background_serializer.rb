@@ -1,22 +1,30 @@
 class Api::V1::BackgroundSerializer
-  def self.get_background(background)
+  include FastJsonapi::ObjectSerializer
+
+  def self.get_background(background, location)
     {
       "data": {
-    #     "type": "image",
-    #     "id": null,
-    #     "attributes": {
-    #       "image": {
-    #         "location": "denver,co",
-    #         "image_url": "https://pixabay.com/get/54e6d4444f50a814f1dc8460962930761c38d6ed534c704c7c2878dd954dc451_640.jpg",
-    #         "credit": {
-    #           "source": "pixabay.com",
-    #           "author": "quinntheislander",
-    #           "logo": "https://pixabay.com/static/img/logo_square.png"
-    #         }
-    #       }
-    #     }
-    #   }
-    # }
-
+        "id": nil,
+        "type": "image",
+        "attributes": {
+          "image": {
+            "description": {
+              "description": background.description,
+              "alt_description": background.alt_description,
+              "location": location,
+            },
+            "image_url": background.image_url,
+            "credit": {
+              "source": background.source,
+              "photographer": background.photographer,
+              "profile": background.profile_url,
+              "logo": background.logo,
+              "utm_source": background.utm_source,
+              "utm_medium": background.utm_medium,
+            }
+          }
+        }
+      }
+    }
   end
 end
