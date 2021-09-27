@@ -7,7 +7,7 @@ class Background
               :utm_source,
               :utm_medium,
               :source,
-              :upsplash_logo
+              :logo
 
   def initialize(info)
     @description = info[:description]
@@ -17,7 +17,7 @@ class Background
     @photographer = info[:user][:name]
     @utm_source = 'Sweater Weather'
     @utm_medium = 'referral'
-    @source = 'Upsplash'
-    @upsplash_logo = 'https://unsplash.com/blog/content/images/max/2560/1-VnKoValwGK3-d1bZhD6sVA.jpeg'
+    @source = 'upsplash.com'
+    @logo = 'https://unsplash.com/blog/content/images/max/2560/1-VnKoValwGK3-d1bZhD6sVA.jpeg'
   end
 end
