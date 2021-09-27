@@ -1,6 +1,6 @@
 class BackgroundService
   def self.get_background(location)
-    response = conn('https://api.unsplash.com/search/photos').get do |req|
+    response = conn.get('/search/photos') do |req|
       req.headers['Accept-Version'] = 'v1'
       req.headers['Authorization'] = ENV['unsplash_api_key']
       req.params['query'] = location
@@ -13,7 +13,7 @@ class BackgroundService
     JSON.parse(response.body, symbolize_names: true)
   end
 
-  def self.conn(endpoint)
-    Faraday.new(endpoint)
+  def self.conn
+    Faraday.new('https://api.unsplash.com')
   end
 end

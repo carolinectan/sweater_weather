@@ -60,7 +60,7 @@ describe 'Weather API' do
       expect(daily_weather).to have_key(:max_temp)
       expect(daily_weather[:max_temp]).to be_a Float
       expect(daily_weather).to have_key(:min_temp)
-      expect(daily_weather[:min_temp]).to be_a Float
+      expect(daily_weather[:min_temp]).to be_a Numeric
       expect(daily_weather).to have_key(:conditions)
       expect(daily_weather[:conditions]).to be_a String
       expect(daily_weather).to have_key(:icon)
@@ -81,7 +81,7 @@ describe 'Weather API' do
       expect(hourly_weather).to have_key(:time)
       expect(hourly_weather[:time]).to be_a String
       expect(hourly_weather).to have_key(:temperature)
-      expect(hourly_weather[:temperature]).to be_a Float
+      expect(hourly_weather[:temperature]).to be_a Numeric
       expect(hourly_weather).to have_key(:conditions)
       expect(hourly_weather[:conditions]).to be_a String
       expect(hourly_weather).to have_key(:icon)
