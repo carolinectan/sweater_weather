@@ -3,7 +3,7 @@ class BooksFacade
     json = BooksService.find_books(location)
 
     json[:docs][0..(quantity.to_i - 1)].map do |book|
-      Book.new
+      Book.new(book)
     end
   end
 end
