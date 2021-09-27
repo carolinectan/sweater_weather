@@ -33,11 +33,11 @@ describe 'Weather API' do
     expect(forecast[:data][:attributes][:current_weather]).to have_key(:feels_like)
     expect(forecast[:data][:attributes][:current_weather][:feels_like]).to be_a Float
     expect(forecast[:data][:attributes][:current_weather]).to have_key(:humidity)
-    expect(forecast[:data][:attributes][:current_weather][:humidity]).to be_an Integer
+    expect(forecast[:data][:attributes][:current_weather][:humidity]).to be_a Numeric
     expect(forecast[:data][:attributes][:current_weather]).to have_key(:uvi)
     expect(forecast[:data][:attributes][:current_weather][:uvi]).to be_a Numeric
     expect(forecast[:data][:attributes][:current_weather]).to have_key(:visibility)
-    expect(forecast[:data][:attributes][:current_weather][:visibility]).to be_an Integer
+    expect(forecast[:data][:attributes][:current_weather][:visibility]).to be_a Numeric
     expect(forecast[:data][:attributes][:current_weather]).to have_key(:conditions)
     expect(forecast[:data][:attributes][:current_weather][:conditions]).to be_a String
     expect(forecast[:data][:attributes][:current_weather]).to have_key(:icon)
@@ -86,7 +86,6 @@ describe 'Weather API' do
       expect(hourly_weather[:conditions]).to be_a String
       expect(hourly_weather).to have_key(:icon)
       expect(hourly_weather[:icon]).to be_a String
-
       expect(hourly_weather).to_not have_key(:datetime)
       expect(hourly_weather).to_not have_key(:sunrise)
       expect(hourly_weather).to_not have_key(:sunset)
