@@ -1,4 +1,4 @@
-class BooksService
+class BookService
   def self.find_books(location)
     if location.include?(',')
       location = location.gsub(',','+')
