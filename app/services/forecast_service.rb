@@ -1,6 +1,6 @@
 class ForecastService
   def self.get_forecast(location)
-    response = conn('https://api.openweathermap.org/data/2.5/onecall').get do |req|
+    response = conn.get('/data/2.5/onecall') do |req|
       req.params['appid'] = ENV['open_weather_api_key']
       req.params['lat'] = location.latitude
       req.params['lon'] = location.longitude
@@ -10,7 +10,7 @@ class ForecastService
     JSON.parse(response.body, symbolize_names: true)
   end
 
-  def self.conn(endpoint)
-    Faraday.new(endpoint)
+  def self.conn
+    Faraday.new('https://api.openweathermap.org')
   end
 end
