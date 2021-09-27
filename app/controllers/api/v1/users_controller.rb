@@ -4,7 +4,7 @@ class Api::V1::UsersController < ApplicationController
     new_user.password = params[:password]
     new_user.save!
 
-    render json: UserSerializer.generate_api_key(new_user) #status: 201
+    render json: UserSerializer.generate_api_key(new_user), status: :created # 201
   end
 
   private
