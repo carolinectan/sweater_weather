@@ -38,11 +38,33 @@ describe 'Registration API' do
     expect(user[:data]).to_not have_key(:password)
     expect(user[:data][:attributes]).to_not have_key(:password)
   end
+
+  it 'returns a 400 status if password and password confirmation do not match' do
+    headers = { 'CONTENT_TYPE': 'application/json', 'Accept': 'application/json' }
+    # IMPORTANT REQUIREMENT: Send a JSON payload in the body of the request in Postman, under the address bar, click on “Body”, select “raw”, which will show a dropdown that probably says “Text” in it, choose “JSON” from the list
+    # In RSpec, send the request as a param.
+    request_body = {
+      "email": 'whatever@example.com',
+      "password": 'password',
+      "password_confirmation": 'wrongpassword'
+    }
+
+    post '/api/v1/users', headers: headers, params: request_body.to_json
+
+    expect(response).to_not be_successful
+    expect(response.status).to eq(400)
+
+    json = JSON.parse(response.body, symbolize_names: true)
+
+    expect(json).to_not be_empty
+    expect(json.size).to eq(2)
+    expect(json[:message]).to eq('Your request could not be completed.')
+    expect(json[:errors]).to be_an Array
+    expect(json[:errors]).to eq(['Password confirmation must match password.'])
+  end
 end
 
-
 # generates a unique api key associated with that user
-
 # SAD PATHS:
 # An unsuccessful request returns an appropriate 400-level status code and body with a description of why the request wasn’t successful.
 # Potential reasons a request would fail: passwords don’t match, email has already been taken, missing a field, etc.
