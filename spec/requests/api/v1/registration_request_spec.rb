@@ -5,7 +5,7 @@ describe 'Registration API' do
     headers = { 'CONTENT_TYPE': 'application/json', 'Accept': 'application/json' }
     # In Postman, send the request in the body.
     # In RSpec, send the request as a param.
-    request_body: {
+    request_body = {
       "email": "whatever@example.com",
       "password": "password",
       "password_confirmation": "password"
