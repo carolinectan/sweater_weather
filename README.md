@@ -8,7 +8,9 @@ Things you may want to cover:
 * Ruby version
 
 * System dependencies
-
+- Open Library API https://openlibrary.org/dev/docs/api/search
+  - No authorization key required
+  
 * Configuration
 
 * Database creation
