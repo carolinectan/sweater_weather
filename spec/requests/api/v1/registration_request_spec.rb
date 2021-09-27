@@ -9,7 +9,7 @@ describe 'Registration API' do
       "email": "whatever@example.com",
       "password": "password",
       "password_confirmation": "password"
-    }
+    }.to_json
 
     post '/api/v1/users', headers: headers, params: request_body
 
