@@ -6,7 +6,6 @@ class Api::V1::UsersController < ApplicationController
     return password_error if params[:password] != params[:password_confirmation]
 
     new_user = User.new(user_params)
-    new_user.password = params[:password]
     new_user.api_key = SecureRandom.alphanumeric(27)
     new_user.update(api_key: SecureRandom.alphanumeric(27)) if new_user.api_key == User.find_by(api_key: new_user.api_key)
     new_user.save!
@@ -44,6 +43,6 @@ class Api::V1::UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:email, :password_digest)
+    params.permit(:email, :password, :password_confirmation)
   end
 end

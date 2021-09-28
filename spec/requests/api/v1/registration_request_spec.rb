@@ -34,7 +34,6 @@ describe 'Registration API' do
     expect(user[:data][:attributes]).to have_key(:api_key)
     expect(user[:data][:attributes][:api_key]).to be_a String
     expect(user[:data][:attributes][:api_key].length).to eq(27)
-
     expect(user[:data]).to_not have_key(:password)
     expect(user[:data][:attributes]).to_not have_key(:password)
   end
