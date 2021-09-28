@@ -134,6 +134,7 @@ RSpec/NotToNot:
 Style/ClassAndModuleChildren:
   Exclude:
     - 'app/controllers/**/*.rb'
+    - 'app/serializers/**/*.rb'
 
 Style/Documentation:
   Enabled: false

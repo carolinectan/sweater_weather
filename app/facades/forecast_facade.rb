@@ -10,6 +10,6 @@ class ForecastFacade
       HourlyForecast.new(hourly)
     end
 
-    weather = Weather.new(current_forecast, daily_forecast, hourly_forecast)
+    Weather.new(current_forecast, daily_forecast, hourly_forecast)
   end
 end
