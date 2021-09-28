@@ -39,8 +39,6 @@ describe 'Login API' do
   end
 end
 
-# A successful request returns the user’s api key.
-
 # An unsuccessful request returns an appropriate 400-level status code and body with a description of why the request wasn’t successful.
 
 # Potential reasons a request would fail: credentials are bad, etc
