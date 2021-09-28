@@ -1,8 +1,28 @@
 # README
 
-## Tech
-- Rails 5.2.6
-- Ruby 2.7.2p137
+Welcome to Sweather Weather!
+
+## Table of Contents
+- [Technologies](#technologies)
+- [System Dependencies](#system-dependencies)
+- [Configuration](#configuration)
+- [Database Creation](#database-creation)
+- [How to Run the Test Suite](#how-to-run-the-test-suite)
+<!-- - [Screenshots](#screenshots) -->
+<!-- - [Additional Resources](#additional-resources) -->
+
+## Technologies
+|Development|Development|Testing
+|--- |--- |--- |
+|[Rails 5.2.6](https://rubygems.org/gems/rails/versions/5.2.6)|[Git](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)|[RSpec for Rails](https://github.com/rspec/rspec-rails)
+|[Ruby 2.7.2](https://www.ruby-lang.org/en/downloads/)|[Github](https://desktop.github.com/)|[Capybara](https://github.com/teamcapybara/capybara)
+|[Pry](https://rubygems.org/gems/pry/versions/0.10.3)|[FastJSONApi](https://github.com/Netflix/fast_jsonapi)|[Webmock](https://github.com/bblimke/webmock)
+|[PostgresQL](https://www.postgresql.org/)|[BCrypt](https://github.com/bcrypt-ruby/bcrypt-ruby)|[VCR](https://github.com/vcr/vcr)
+|[Faraday](https://github.com/lostisland/faraday)|[Rubocop](https://rubygems.org/gems/rubocop/versions/0.39.0)|[Launchy](https://rubygems.org/gems/launchy/versions/2.4.3)
+|[Figaro](https://github.com/laserlemon/figaro)|[Atom](https://atom.io/)|[Postman](https://www.postman.com/product/rest-client/)
+|||[SimpleCov](https://rubygems.org/gems/simplecov/versions/0.12.0)
+|||[shoulda-matchers](https://github.com/thoughtbot/shoulda-matchers)|
+
 
 ## System Dependencies
 - [MapQuest Developer API](https://developer.mapquest.com/documentation/)
@@ -22,7 +42,7 @@
   - Clone this repo
   - Run `bundle`
 
-## Database Setup
+## Database Creation
   - Run `rails db:{create,migrate}`
 
 ## How to Run the Test Suite
@@ -30,5 +50,5 @@
 - Delete spec/fixtures/vcr_cassettes, then run `bundle exec rspec`
 ### Postman:
 - In Terminal, run `rails s`
-- In Postman, set appropriate HTTP verb, append endpoint URI to http://localhost:3000/, and select "SEND".
-- NOTE: Send a JSON payload in the body of the request in Postman. Under the address bar, click on “Body”, select “raw”, and from the dropdown that probably says “Text” in it, choose “JSON”.
+- In Postman, set appropriate HTTP verb, append endpoint URI to `http://localhost:3000/`, and select `SEND`.
+- NOTE: Send a JSON payload in the body of the request in Postman. Under the address bar, click on `Body`, select `raw`, and from the dropdown that probably says `Text` in it, choose `JSON`.
