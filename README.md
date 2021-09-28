@@ -63,4 +63,4 @@ unsplash_api_key: Client-ID <your_unsplash_api_key>
 ### Postman:
 - In Terminal, run `rails s`
 - In Postman, set appropriate HTTP verb, append endpoint URI to `http://localhost:3000/`, and select `SEND`.
-- NOTE: Send a JSON payload in the body of the request in Postman. Under the address bar, click on `Body`, select `raw`, and from the dropdown that probably says `Text` in it, choose `JSON`.
+- NOTE: For `post` requests, send a JSON payload in the body of the request in Postman. Under the address bar, click on `Body`, select `raw`, and from the dropdown that probably says `Text` in it, choose `JSON`.
