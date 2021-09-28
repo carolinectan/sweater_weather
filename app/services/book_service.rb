@@ -1,6 +1,6 @@
 class BookService
   def self.find_books(location)
-    location = location.gsub(',', '+') if location.include?(',')
+    location = location.tr(',', '+') if location.include?(',')
 
     response = conn.get('/search.json') do |req|
       req.params['q'] = location

@@ -7,12 +7,14 @@ describe 'Login API' do
                  password_confirmation: 'password',
                  api_key: 'k3d6U8Yb8530E35dbdkFF954Aaa')
 
-    headers = { 'CONTENT_TYPE': 'application/json', 'Accept': 'application/json' }
-    # REQUIREMENT: Send a JSON payload in the body of the request in Postman, under the address bar, click on “Body”, select “raw”, which will show a dropdown that probably says “Text” in it, choose “JSON” from the list
+    headers = { CONTENT_TYPE: 'application/json', Accept: 'application/json' }
+    # REQUIREMENT: Send a JSON payload in the body of the request in Postman,
+    # under the address bar, click on “Body”, select “raw”, which will show a
+    # dropdown that probably says “Text” in it, choose “JSON” from the list
     # In RSpec, send the request as a param.
     request_body = {
-      "email": 'whatever@example.com',
-      "password": 'password'
+      email: 'whatever@example.com',
+      password: 'password'
     }
 
     post '/api/v1/sessions', headers: headers, params: request_body.to_json
