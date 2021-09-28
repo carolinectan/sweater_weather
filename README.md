@@ -32,13 +32,13 @@ You will need to sign up for the MapQuest Developer, Open Weather Map, and Unspl
 
 - [MapQuest Developer API](https://developer.mapquest.com/documentation/)
   - [Sign up for an account with MapQuest](https://developer.mapquest.com/plan_purchase/steps/business_edition/business_edition_free/register)
-  - Then, [get your key here](https://developer.mapquest.com/user/me/apps) then select "Create a New Key" and fill in required fields.
+  - Then, [get your key here](https://developer.mapquest.com/user/me/apps) then select `Create a New Key` and fill in required fields.
 - [Open Weather Map API](https://openweathermap.org/api)
   - [Sign up](https://home.openweathermap.org/users/sign_up)
-  - Go to [your API keys](https://home.openweathermap.org/api_keys), fill in API key name, and select "Generate."
+  - Go to [your API keys](https://home.openweathermap.org/api_keys), fill in API key name, and select `Generate`.
 - [Unsplash API ](https://unsplash.com/documentation)
   - First, login or [join](https://unsplash.com/join)
-  - Then register your application. Go to [your apps](https://unsplash.com/oauth/applications), click "New Application, and fill in the required details.
+  - Then register your application. Go to [your apps](https://unsplash.com/oauth/applications), click `New Application`, and fill in the required details.
   - NOTE: All applications must follow the [API Guidelines](https://help.unsplash.com/en/articles/2511245-unsplash-api-guidelines), including [properly providing attribution for the photographer and Unsplash](https://help.unsplash.com/en/articles/2511315-guideline-attribution).
 - [Open Library API](https://openlibrary.org/dev/docs/api/search)
   - No authorization key required
@@ -47,7 +47,7 @@ You will need to sign up for the MapQuest Developer, Open Weather Map, and Unspl
   - Clone this repo
   - Run `bundle`
   - Run `bundle exec figaro install`
-  - Open your `config/application.yml` file in your code editor (You may have to open it manually). Then, add to the bottom of the `config/application.yml` file your api keys:
+  - Open your `config/application.yml` file in your code editor (You may have to open it manually). Then, add to the bottom of the `config/application.yml` file **your** api keys:
 ```
 open_weather_api_key: <your_open_weather_api_key>
 mapquest_api_key: <your_mapquest_api_key>
