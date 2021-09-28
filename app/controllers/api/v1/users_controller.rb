@@ -25,7 +25,7 @@ class Api::V1::UsersController < ApplicationController
       message: 'Your request could not be completed.',
       errors: ['Password confirmation must match password.']
     },
-    status: :bad_request
+           status: :bad_request
   end
 
   def missing_field_error
@@ -33,7 +33,7 @@ class Api::V1::UsersController < ApplicationController
       message: 'Your request could not be completed.',
       errors: ['All fields are required.']
     },
-    status: :bad_request
+           status: :bad_request
   end
 
   def email_error
@@ -41,7 +41,7 @@ class Api::V1::UsersController < ApplicationController
       message: 'Your request could not be completed.',
       errors: ['Email address has already been taken.']
     },
-    status: :bad_request
+           status: :bad_request
   end
 
   private

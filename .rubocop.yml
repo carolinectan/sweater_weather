@@ -102,7 +102,7 @@ Rake/Desc:
 
 RSpec/DescribeClass:
   Exclude:
-    - 'spec/features/**/*.rb'
+    - 'spec/requests/**/*.rb'
 
 RSpec/DescribedClass:
   EnforcedStyle: explicit
@@ -130,7 +130,7 @@ RSpec/NestedGroups:
 
 RSpec/NotToNot:
   Enabled: false
-  
+
 Style/ClassAndModuleChildren:
   Exclude:
     - 'app/controllers/**/*.rb'
@@ -159,3 +159,6 @@ Style/SymbolArray:
     - 'Gemfile'
     - 'Rakefile'
     - 'spec/**/*.rb'
+
+Style/WordArray:
+  Enabled: false
