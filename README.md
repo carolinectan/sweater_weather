@@ -24,11 +24,8 @@ Sweather Weather consumes the MapQuest Developer API, the Open Weather Map API, 
 |[Ruby 2.7.2](https://www.ruby-lang.org/en/downloads/)|[Github](https://desktop.github.com/)|[Capybara](https://github.com/teamcapybara/capybara)
 |[Pry](https://rubygems.org/gems/pry/versions/0.10.3)|[FastJSONApi](https://github.com/Netflix/fast_jsonapi)|[Webmock](https://github.com/bblimke/webmock)
 |[PostgresQL](https://www.postgresql.org/)|[BCrypt](https://github.com/bcrypt-ruby/bcrypt-ruby)|[VCR](https://github.com/vcr/vcr)
-|[Faraday](https://github.com/lostisland/faraday)|[Rubocop](https://rubygems.org/gems/rubocop/versions/0.39.0)|[Launchy](https://rubygems.org/gems/launchy/versions/2.4.3)
-|[Figaro](https://github.com/laserlemon/figaro)|[Atom](https://atom.io/)|[Postman](https://www.postman.com/product/rest-client/)
+|[Faraday](https://github.com/lostisland/faraday)|[Rubocop](https://rubygems.org/gems/rubocop/versions/0.39.0)|[shoulda-matchers](https://github.com/thoughtbot/shoulda-matchers)|[Figaro](https://github.com/laserlemon/figaro)|[Atom](https://atom.io/)|[Postman](https://www.postman.com/product/rest-client/)
 |||[SimpleCov](https://rubygems.org/gems/simplecov/versions/0.12.0)
-|||[shoulda-matchers](https://github.com/thoughtbot/shoulda-matchers)|
-
 
 ## System Dependencies
 You will need to sign up for the MapQuest Developer, Open Weather Map, and Unsplash api keys.
