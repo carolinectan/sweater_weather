@@ -3,7 +3,7 @@ require 'rails_helper'
 describe 'Registration API' do
   it 'creates a user in the database and generates a unique api key associated with that user' do
     headers = { 'CONTENT_TYPE': 'application/json', 'Accept': 'application/json' }
-    # IMPORTANT REQUIREMENT: Send a JSON payload in the body of the request in Postman, under the address bar, click on “Body”, select “raw”, which will show a dropdown that probably says “Text” in it, choose “JSON” from the list
+    # REQUIREMENT: Send a JSON payload in the body of the request in Postman, under the address bar, click on “Body”, select “raw”, which will show a dropdown that probably says “Text” in it, choose “JSON” from the list
     # In RSpec, send the request as a param.
     request_body = {
       "email": 'whatever@example.com',
