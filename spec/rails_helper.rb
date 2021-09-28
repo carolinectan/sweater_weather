@@ -5,7 +5,7 @@ require File.expand_path('../config/environment', __dir__)
 # Prevent database truncation if the environment is production
 abort('The Rails environment is running in production mode!') if Rails.env.production?
 require 'rspec/rails'
-require 'faker'
+# require 'faker'
 require 'simplecov' # look where simplecov should live
 SimpleCov.start do
   add_filter 'spec/'
@@ -69,7 +69,7 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
-  config.include FactoryBot::Syntax::Methods
+  # config.include FactoryBot::Syntax::Methods
 end
 
 Shoulda::Matchers.configure do |config|
