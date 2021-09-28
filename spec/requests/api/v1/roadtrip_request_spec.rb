@@ -2,12 +2,23 @@ require 'rails_helper'
 
 describe 'Roadtrip API' do
   it 'sends the roadtrip travel time and weather at eta', :vcr do
+    User.create!(email: 'whatever@example.com',
+                 password: 'password',
+                 password_confirmation: 'password',
+                 api_key: 'jgn983hy48thw9begh98h4539h4')
+
     headers = { CONTENT_TYPE: 'application/json', Accept: 'application/json' }
     request_body = {
       origin: 'Denver,CO',
       destination: 'Pueblo,CO',
       api_key: 'jgn983hy48thw9begh98h4539h4'
     }
+    # REQUIREMENTS: This POST endpoint should NOT call your endpoint like
+    # /api/v1/road_trip?origin=Denver,CO&destination=Pueblo,CO&api_key=abc123,
+    # and should NOT send as form data either. You must send a JSON payload in the
+    # body of the request in Postman, under the address bar, click on “Body”,
+    # select “raw”, which will show a dropdown that probably says “Text” in it,
+    # choose “JSON” from the list
 
     post '/api/v1/road_trip', headers: headers, params: request_body.to_json
 
@@ -38,6 +49,75 @@ describe 'Roadtrip API' do
     expect(json[:data][:attributes][:weather_at_eta][:temperature]).to be_a Numeric
     expect(json[:data][:attributes][:weather_at_eta]).to have_key(:conditions)
     expect(json[:data][:attributes][:weather_at_eta][:conditions]).to be_a String
+  end
+
+  it 'sends a 401 if the user does not exist', :vcr do
+    headers = { CONTENT_TYPE: 'application/json', Accept: 'application/json' }
+    request_body = {
+      origin: 'Denver,CO',
+      destination: 'Pueblo,CO',
+      api_key: 'jgn983hy48thw9begh98h4539h4'
+    }
+
+    post '/api/v1/road_trip', headers: headers, params: request_body.to_json
+
+    expect(response).to_not be_successful
+    expect(response.status).to eq(401)
+
+    json = JSON.parse(response.body, symbolize_names: true)
+
+    expect(json).to be_a Hash
+    expect(json).to_not be_empty
+    expect(json.size).to eq(2)
+    expect(json[:message]).to eq('Your request could not be completed.')
+    expect(json[:errors]).to be_an Array
+    expect(json[:errors]).to eq(['Bad credentials.'])
+  end
+
+  it 'sends a 401 if the api key does not match one in the database', :vcr do
+    headers = { CONTENT_TYPE: 'application/json', Accept: 'application/json' }
+    request_body = {
+      origin: 'Denver,CO',
+      destination: 'Pueblo,CO',
+      api_key: 'jgn983hy48thw9begh98h4539h4'
+    }
+
+    post '/api/v1/road_trip', headers: headers, params: request_body.to_json
+
+    expect(response).to_not be_successful
+    expect(response.status).to eq(401)
+
+    json = JSON.parse(response.body, symbolize_names: true)
+
+    expect(json).to be_a Hash
+    expect(json).to_not be_empty
+    expect(json.size).to eq(2)
+    expect(json[:message]).to eq('Your request could not be completed.')
+    expect(json[:errors]).to be_an Array
+    expect(json[:errors]).to eq(['Bad credentials.'])
+  end
+
+  it 'sends a 401 if the api key is not provided', :vcr do
+    headers = { CONTENT_TYPE: 'application/json', Accept: 'application/json' }
+    request_body = {
+      origin: 'Denver,CO',
+      destination: 'Pueblo,CO'
+    }
+
+    post '/api/v1/road_trip', headers: headers, params: request_body.to_json
+
+    expect(response).to_not be_successful
+    expect(response.status).to eq(401)
+
+    json = JSON.parse(response.body, symbolize_names: true)
+
+    expect(json).to be_a Hash
+    expect(json).to_not be_empty
+    expect(json.size).to eq(2)
+    expect(json[:message]).to eq('Your request could not be completed.')
+    expect(json[:errors]).to be_an Array
+    expect(json[:errors]).to eq(['Bad credentials.'])
+  end
 
   # travel_time, string, something user-friendly like “2 hours, 13 minutes” or “2h13m” or “02:13:00” or something of that nature (you don’t have to include seconds); set this string to “impossible route” if there is no route between your cities
   # weather_at_eta, conditions at end_city when you arrive (not CURRENT weather), object containing:
@@ -59,17 +139,9 @@ describe 'Roadtrip API' do
   #     }
   #   }
   # }
-  # Requirements:
-  #
-  # This POST endpoint should NOT call your endpoint like /api/v1/road_trip?origin=Denver,CO&destination=Pueblo,CO&api_key=abc123, and should NOT send as form data either. You must send a JSON payload in the body of the request
-  # in Postman, under the address bar, click on “Body”, select “raw”, which will show a dropdown that probably says “Text” in it, choose “JSON” from the list
-  # this is a hard requirement to pass this endpoint!
-  # API key must be sent
-  # If no API key is given, or an incorrect key is provided, return 401 (Unauthorized)
   # You will use MapQuest’s Directions API: https://developer.mapquest.com/documentation/directions-api/
   # The structure of the response should be JSON API 1.0 Compliant.
   # Your code should allow for the following:
   # Traveling from New York, NY to Los Angeles, CA, with appropriate weather in L.A. when you arrive 40 hours later
   # Traveling from New York, NY to London, UK, weather block should be empty and travel time should be “impossible”
-  end
 end
