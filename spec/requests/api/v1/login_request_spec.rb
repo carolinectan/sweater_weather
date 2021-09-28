@@ -44,6 +44,7 @@ describe 'Login API' do
   # guessed a correct email address, and you tell them the password is bad, then
   # they don’t need to keep guessing email addresses, and can just try to crack
   # the password)
+
   it 'sends a 400 error if password credentials are bad' do
     User.create!(email: 'whatever@example.com',
                  password: 'password',
