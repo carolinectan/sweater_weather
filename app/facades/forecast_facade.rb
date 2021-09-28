@@ -12,4 +12,12 @@ class ForecastFacade
 
     Weather.new(current_forecast, daily_forecast, hourly_forecast)
   end
+
+  def self.get_hourly_only(location)
+    json = ForecastService.get_forecast(location)
+
+    json[:hourly][0..47].map do |hourly|
+      HourlyForecast.new(hourly)
+    end
+  end
 end
