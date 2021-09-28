@@ -2,7 +2,9 @@ require 'securerandom'
 
 class Api::V1::UsersController < ApplicationController
   def create
-    return missing_field_error if !params[:email] || !params[:password] || !params[:password_confirmation]
+    if !params[:email] || !params[:password] || !params[:password_confirmation]
+      return missing_field_error
+    end
     return password_error if params[:password] != params[:password_confirmation]
 
     new_user = User.new(user_params)
