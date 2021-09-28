@@ -17,4 +17,23 @@ class Api::V1::RoadtripSerializer
       }
     }
   end
+
+  # def self.impossible_route(roadtrip_params)
+  #   null = nil
+  #   {
+  #     data: {
+  #       id: null,
+  #       type: 'roadtrip',
+  #       attributes: {
+  #         start_city: roadtrip_params[:origin],
+  #         end_city: roadtrip_params[:destination],
+  #         travel_time: 'Impossible route',
+  #         weather_at_eta: {
+  #           temperature: null,
+  #           conditions: null
+  #         }
+  #       }
+  #     }
+  #   }
+  # end
 end
