@@ -39,10 +39,71 @@ describe 'Login API' do
     expect(json[:data][:attributes][:api_key]).to be_a String
     expect(json[:data][:attributes][:api_key].length).to eq(27)
   end
+  # Security tip: never tell a user which field (email/password) is incorrect,
+  # as this alerts malicious users how to attack your site (eg, if they’ve
+  # guessed a correct email address, and you tell them the password is bad, then
+  # they don’t need to keep guessing email addresses, and can just try to crack
+  # the password)
+  it 'sends a 400 error if password credentials are bad' do
+    User.create!(email: 'whatever@example.com',
+                 password: 'password',
+                 password_confirmation: 'password',
+                 api_key: 'k3d6U8Yb8530E35dbdkFF954Aaa')
+
+    headers = { CONTENT_TYPE: 'application/json', Accept: 'application/json' }
+    # REQUIREMENT: Send a JSON payload in the body of the request in Postman,
+    # under the address bar, click on “Body”, select “raw”, which will show a
+    # dropdown that probably says “Text” in it, choose “JSON” from the list
+    # In RSpec, send the request as a param.
+    request_body = {
+      email: 'whatever@example.com',
+      password: 'wrongpassword'
+    }
+
+    post '/api/v1/sessions', headers: headers, params: request_body.to_json
+
+    expect(response).to_not be_successful
+    expect(response.status).to eq(400)
+
+    json = JSON.parse(response.body, symbolize_names: true)
+
+    expect(json).to_not be_empty
+    expect(json.size).to eq(2)
+    expect(json[:message]).to eq('Your request could not be completed.')
+    expect(json[:errors]).to be_an Array
+    expect(json[:errors]).to eq(['Bad credentials.'])
+  end
+
+  it 'sends a 400 error if email credentials are bad' do
+    User.create!(email: 'whatever@example.com',
+                 password: 'password',
+                 password_confirmation: 'password',
+                 api_key: 'k3d6U8Yb8530E35dbdkFF954Aaa')
+
+    headers = { CONTENT_TYPE: 'application/json', Accept: 'application/json' }
+    # REQUIREMENT: Send a JSON payload in the body of the request in Postman,
+    # under the address bar, click on “Body”, select “raw”, which will show a
+    # dropdown that probably says “Text” in it, choose “JSON” from the list
+    # In RSpec, send the request as a param.
+    request_body = {
+      email: 'wrongemail@example.com',
+      password: 'password'
+    }
+
+    post '/api/v1/sessions', headers: headers, params: request_body.to_json
+
+    expect(response).to be_successful
+    expect(response.status).to eq(400)
+
+    json = JSON.parse(response.body, symbolize_names: true)
+
+    expect(json).to_not be_empty
+    expect(json.size).to eq(2)
+    expect(json[:message]).to eq('Your request could not be completed.')
+    expect(json[:errors]).to be_an Array
+    expect(json[:errors]).to eq(['Bad credentials.'])
+  end
 end
 
 # An unsuccessful request returns an appropriate 400-level status code and body with a description of why the request wasn’t successful.
-
 # Potential reasons a request would fail: credentials are bad, etc
-
-# Security tip: never tell a user which field (email/password) is incorrect, as this alerts malicious users how to attack your site (eg, if they’ve guessed a correct email address, and you tell them the password is bad, then they don’t need to keep guessing email addresses, and can just try to crack the password)
