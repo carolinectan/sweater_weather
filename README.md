@@ -44,7 +44,7 @@ You will need to sign up for the MapQuest Developer, Open Weather Map, and Unspl
   - Clone this repo
   - Run `bundle`
   - Run `bundle exec figaro install`
-  - Open your `config/application.yml` file in your code editor (You may have to open it manually). Then, add to the bottom of the config/application.yml file your api keys:
+  - Open your `config/application.yml` file in your code editor (You may have to open it manually). Then, add to the bottom of the `config/application.yml` file your api keys:
 ```
 open_weather_api_key: <your_open_weather_api_key>
 mapquest_api_key: <your_mapquest_api_key>
