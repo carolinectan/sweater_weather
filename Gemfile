@@ -27,8 +27,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
-
-# gem 'date'
+gem 'bcrypt', '~> 3.1.7'
 gem 'faraday'
 gem 'fast_jsonapi'
 
@@ -44,17 +43,21 @@ end
 group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'rubocop-rails'
+  gem 'rubocop', require: false
+  gem 'rubocop-performance', require: false
+  gem 'rubocop-rails', require: false
+  gem 'rubocop-rake', require: false
+  gem 'rubocop-rspec', require: false
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
 group :test do
   gem 'rspec-rails', '~> 4.0.1'
-  gem 'simplecov'
   gem 'shoulda-matchers'
-  gem 'webmock'
+  gem 'simplecov'
   gem 'vcr'
+  gem 'webmock'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

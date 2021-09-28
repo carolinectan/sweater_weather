@@ -3,7 +3,7 @@ require 'rails_helper'
 describe 'Books API' do
   it 'sends the books and forcast for a given city and state', :vcr do
     params = { location: 'denver,co', quantity: 5 }
-    headers = { 'CONTENT_TYPE': 'application/json', 'Accept': 'application/json' }
+    headers = { CONTENT_TYPE: 'application/json', Accept: 'application/json' }
 
     get '/api/v1/book-search', headers: headers, params: params
 
@@ -14,7 +14,7 @@ describe 'Books API' do
 
     expect(books).to be_a Hash
     expect(books[:data]).to have_key(:id)
-    expect(books[:data][:id]).to eq('null')
+    expect(books[:data][:id]).to eq(nil)
     expect(books[:data]).to have_key(:type)
     expect(books[:data][:type]).to eq('books')
 

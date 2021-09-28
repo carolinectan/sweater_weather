@@ -3,7 +3,7 @@ require 'rails_helper'
 describe 'Weather API' do
   it 'sends the forcast for a given city and state', :vcr do
     location = { location: 'denver,co' }
-    headers = { 'CONTENT_TYPE': 'application/json', 'Accept': 'application/json' }
+    headers = { CONTENT_TYPE: 'application/json', Accept: 'application/json' }
 
     get '/api/v1/forecast', headers: headers, params: location
 
@@ -58,7 +58,7 @@ describe 'Weather API' do
       expect(daily_weather).to have_key(:sunset)
       expect(daily_weather[:sunset]).to be_a String
       expect(daily_weather).to have_key(:max_temp)
-      expect(daily_weather[:max_temp]).to be_a Float
+      expect(daily_weather[:max_temp]).to be_a Numeric
       expect(daily_weather).to have_key(:min_temp)
       expect(daily_weather[:min_temp]).to be_a Numeric
       expect(daily_weather).to have_key(:conditions)

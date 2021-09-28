@@ -3,7 +3,7 @@ require 'rails_helper'
 describe 'Background Image API' do
   it 'sends the background image for a city', :vcr do
     location = { location: 'denver,co' }
-    headers = { 'CONTENT_TYPE': 'application/json', 'Accept': 'application/json' }
+    headers = { CONTENT_TYPE: 'application/json', Accept: 'application/json' }
 
     get '/api/v1/backgrounds', headers: headers, params: location
 

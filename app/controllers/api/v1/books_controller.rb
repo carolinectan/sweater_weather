@@ -4,6 +4,9 @@ class Api::V1::BooksController < ApplicationController
     location = LocationFacade.find_lat_long(params[:location])
     forecast = ForecastFacade.get_forecast(location)
 
-    render json: BookSerializer.find_books(params[:location], params[:quantity], books, forecast)
+    render json: BookSerializer.find_books(params[:location],
+                                           params[:quantity],
+                                           books,
+                                           forecast)
   end
 end

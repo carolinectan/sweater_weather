@@ -12,7 +12,7 @@ RSpec.describe BookService do
         expect(books).to have_key(:start)
         expect(books[:start]).to be_an Integer
         expect(books).to have_key(:numFoundExact)
-        expect(books[:numFoundExact]).to be_in([true,false])
+        expect(books[:numFoundExact]).to be_in([true, false])
         expect(books).to have_key(:docs)
         expect(books[:docs]).to be_an Array
         expect(books).to have_key(:num_found)
@@ -23,7 +23,7 @@ RSpec.describe BookService do
         expect(books).to have_key(:offset)
         expect(books[:offset]).to eq(nil)
 
-        # Note: Some keys may not exist for some books
+        # NOTE: Some keys may not exist for some books
         books[:docs].first do |book|
           expect(book).to have_key(:key)
           expect(book[:key]).to be_a String
@@ -38,7 +38,7 @@ RSpec.describe BookService do
           expect(book).to have_key(:title_suggest)
           expect(book[:title_suggest]).to be_a String
           expect(book).to have_key(:has_fulltext)
-          expect(book[:has_fulltext]).to be_in([true,false])
+          expect(book[:has_fulltext]).to be_in([true, false])
           expect(book).to have_key(:edition_count)
           expect(book[:edition_count]).to be_an Integer
           expect(book).to have_key(:edition_key)
