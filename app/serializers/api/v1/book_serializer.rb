@@ -9,7 +9,7 @@ class Api::V1::BookSerializer
           destination: location,
           forecast: {
             summary: forecast.current.conditions,
-            temperature: forecast.current.temperature.to_s + ' F'
+            temperature: "#{forecast.current.temperature} F"
           },
           total_books_found: quantity.to_i,
           books: books.map do |book|
