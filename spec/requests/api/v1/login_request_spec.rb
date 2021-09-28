@@ -92,7 +92,7 @@ describe 'Login API' do
 
     post '/api/v1/sessions', headers: headers, params: request_body.to_json
 
-    expect(response).to be_successful
+    expect(response).to_not be_successful
     expect(response.status).to eq(400)
 
     json = JSON.parse(response.body, symbolize_names: true)
