@@ -111,5 +111,3 @@ describe 'Registration API' do
     expect(json[:errors]).to eq(['Email address has already been taken.'])
   end
 end
-
-# generates a unique api key associated with that user
