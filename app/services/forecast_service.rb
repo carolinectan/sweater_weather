@@ -5,6 +5,7 @@ class ForecastService
       req.params['lat'] = location.latitude
       req.params['lon'] = location.longitude
       req.params['exclude'] = 'minutely'
+      req.params['units'] = 'imperial'
     end
 
     JSON.parse(response.body, symbolize_names: true)
