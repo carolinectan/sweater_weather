@@ -1,6 +1,12 @@
-# README
+# Sweater Weather
+![sweater-leaves-pexels-saliha-7642067](https://user-images.githubusercontent.com/81220681/135049580-718bf7e3-9126-4575-a850-362c0a8b80cb.jpg)
 
-Welcome to Sweather Weather!
+## Overview
+Welcome to Sweather Weather! This Ruby on Rails API application helps plan road trips. This app will allow users to see the current weather as well as the forecasted weather at the destination.
+
+In this service-oriented architecture, the (theoretical) front-end team will communicate with this back-end application through an API. Sweater Weather exposes the API that satisfies the front-end team’s requirements.
+
+Sweather Weather consumes the MapQuest Developer API, the Open Weather Map API, the Unsplash API, and the Open Library API then aggregates their data. This app also exposes an API that requires an authentication token and exposes an API for CRUD functionality.
 
 ## Table of Contents
 - [Technologies](#technologies)
