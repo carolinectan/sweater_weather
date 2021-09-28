@@ -15,7 +15,7 @@ Sweather Weather consumes the MapQuest Developer API, the Open Weather Map API, 
 - [Database Creation](#database-creation)
 - [How to Run the Test Suite](#how-to-run-the-test-suite)
 <!-- - [Screenshots](#screenshots) -->
-<!-- - [Additional Resources](#additional-resources) -->
+- [Endpoints](#endpoints)
 
 ## Technologies
 |Development|Development|Testing
@@ -64,3 +64,68 @@ unsplash_api_key: Client-ID <your_unsplash_api_key>
 - In Terminal, run `rails s`
 - In Postman, set appropriate HTTP verb, append endpoint URI to `http://localhost:3000/`, and select `SEND`.
 - NOTE: For `post` requests, send a JSON payload in the body of the request in Postman. Under the address bar, click on `Body`, select `raw`, and from the dropdown that probably says `Text` in it, choose `JSON`.
+
+## Endpoints
+
+### Retrieve Weather for a City
+#### Request
+```
+GET /api/v1/forecast?location=denver,co
+Content-Type: application/json
+Accept: application/json
+```
+
+### Background Image for a City
+#### Request
+```
+GET /api/v1/forecast?location=denver,co
+Content-Type: application/json
+Accept: application/json
+```
+
+### Book Search
+- Request
+- `GET /api/v1/book-search?location=denver,co&quantity=5`
+
+### User Registration
+#### Request
+```
+POST /api/v1/users
+Content-Type: application/json
+Accept: application/json
+
+{
+  "email": "whatever@example.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
+```
+
+### Login
+#### Request
+```
+POST /api/v1/sessions
+Content-Type: application/json
+Accept: application/json
+
+{
+  "email": "whatever@example.com",
+  "password": "password"
+}
+```
+
+### Road Trip
+#### Request
+```
+POST /api/v1/road_trip
+Content-Type: application/json
+Accept: application/json
+
+body:
+
+{
+  "origin": "Denver,CO",
+  "destination": "Pueblo,CO",
+  "api_key": "jgn983hy48thw9begh98h4539h4"
+}
+```
