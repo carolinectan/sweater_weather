@@ -25,6 +25,8 @@ Welcome to Sweather Weather!
 
 
 ## System Dependencies
+You will need to sign up for the MapQuest Developer, Open Weather Map, and Unsplash api keys.
+
 - [MapQuest Developer API](https://developer.mapquest.com/documentation/)
   - [Sign up for an account with MapQuest](https://developer.mapquest.com/plan_purchase/steps/business_edition/business_edition_free/register)
   - Then, [get your key here](https://developer.mapquest.com/user/me/apps) then select "Create a New Key" and fill in required fields.
@@ -41,6 +43,13 @@ Welcome to Sweather Weather!
 ## Configuration
   - Clone this repo
   - Run `bundle`
+  - Run `bundle exec figaro install`
+  - Open your `config/application.yml` file in your code editor (You may have to open it manually). Then, add to the bottom of the config/application.yml file your api keys:
+```
+open_weather_api_key: <your_open_weather_api_key>
+mapquest_api_key: <your_mapquest_api_key>
+unsplash_api_key: Client-ID <your_unsplash_api_key>
+```
 
 ## Database Creation
   - Run `rails db:{create,migrate}`
