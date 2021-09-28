@@ -39,17 +39,6 @@ describe 'Login API' do
   end
 end
 
-# {
-#   "data": {
-#     "type": "users",
-#     "id": "1",
-#     "attributes": {
-#       "email": "whatever@example.com",
-#       "api_key": "jgn983hy48thw9begh98h4539h4"
-#     }
-#   }
-# }
-
 # A successful request returns the user’s api key.
 
 # An unsuccessful request returns an appropriate 400-level status code and body with a description of why the request wasn’t successful.
