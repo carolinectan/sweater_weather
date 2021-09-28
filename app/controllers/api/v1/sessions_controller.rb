@@ -14,7 +14,7 @@ class Api::V1::SessionsController < ApplicationController
       message: 'Your request could not be completed.',
       errors: ['Bad credentials.']
     },
-           status: :bad_request
+           status: :unauthorized
   end
 
   private
