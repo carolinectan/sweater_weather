@@ -62,9 +62,51 @@ describe 'Registration API' do
     expect(json[:errors]).to be_an Array
     expect(json[:errors]).to eq(['Password confirmation must match password.'])
   end
+
+  it 'returns a 400 status if a field is missing' do
+    headers = { 'CONTENT_TYPE': 'application/json', 'Accept': 'application/json' }
+    # No email or password confirmation included
+    request_body = {
+      "password": 'password',
+    }
+
+    post '/api/v1/users', headers: headers, params: request_body.to_json
+
+    expect(response).to_not be_successful
+    expect(response.status).to eq(400)
+
+    json = JSON.parse(response.body, symbolize_names: true)
+
+    expect(json).to_not be_empty
+    expect(json.size).to eq(2)
+    expect(json[:message]).to eq('Your request could not be completed.')
+    expect(json[:errors]).to be_an Array
+    expect(json[:errors]).to eq(['All fields are required.'])
+  end
+
+  it 'returns a 400 status if a the email has already been taken' do
+    User.create!(email: 'whatever@example.com', password: 'password', password_confirmation: 'password')
+
+    headers = { 'CONTENT_TYPE': 'application/json', 'Accept': 'application/json' }
+    request_body = {
+      "email": User.last.email,
+      "password": 'password',
+      "password_confirmation": 'password'
+    }
+
+    post '/api/v1/users', headers: headers, params: request_body.to_json
+
+    expect(response).to_not be_successful
+    expect(response.status).to eq(400)
+
+    json = JSON.parse(response.body, symbolize_names: true)
+
+    expect(json).to_not be_empty
+    expect(json.size).to eq(2)
+    expect(json[:message]).to eq('Your request could not be completed.')
+    expect(json[:errors]).to be_an Array
+    expect(json[:errors]).to eq(['Email address has already been taken.'])
+  end
 end
 
 # generates a unique api key associated with that user
-# SAD PATHS:
-# An unsuccessful request returns an appropriate 400-level status code and body with a description of why the request wasn’t successful.
-# Potential reasons a request would fail: passwords don’t match, email has already been taken, missing a field, etc.
