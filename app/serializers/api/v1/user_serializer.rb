@@ -1,5 +1,3 @@
-require 'securerandom'
-
 class Api::V1::UserSerializer
   include FastJsonapi::ObjectSerializer
 
@@ -10,7 +8,7 @@ class Api::V1::UserSerializer
         "id": new_user.id.to_s,
         "attributes": {
           "email": new_user.email,
-          "api_key": SecureRandom.alphanumeric(27)
+          "api_key": new_user.api_key
         }
       }
     }

@@ -85,7 +85,10 @@ describe 'Registration API' do
   end
 
   it 'returns a 400 status if a the email has already been taken' do
-    User.create!(email: 'whatever@example.com', password: 'password', password_confirmation: 'password')
+    User.create!(email: 'whatever@example.com',
+                 password: 'password',
+                 password_confirmation: 'password',
+                 api_key: 'k3d6U8Yb8530E35dbdkFF954Aaa')
 
     headers = { 'CONTENT_TYPE': 'application/json', 'Accept': 'application/json' }
     request_body = {
