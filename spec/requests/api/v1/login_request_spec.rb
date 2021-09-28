@@ -1,7 +1,12 @@
 require 'rails_helper'
 
-decribe 'Login API' do
-  it "sends the user's api key" do
+describe 'Login API' do
+  it "sends the user's api key", :vcr do
+    User.create!(email: 'whatever@example.com',
+                 password: 'password',
+                 password_confirmation: 'password',
+                 api_key: 'k3d6U8Yb8530E35dbdkFF954Aaa')
+
     headers = { 'CONTENT_TYPE': 'application/json', 'Accept': 'application/json' }
     # REQUIREMENT: Send a JSON payload in the body of the request in Postman, under the address bar, click on “Body”, select “raw”, which will show a dropdown that probably says “Text” in it, choose “JSON” from the list
     # In RSpec, send the request as a param.
@@ -13,7 +18,7 @@ decribe 'Login API' do
     post '/api/v1/sessions', headers: headers, params: request_body.to_json
 
     expect(response).to be_successful
-    expect(response).to eq(200)
+    expect(response.status).to eq(200)
 
     json = JSON.parse(response.body, symbolize_names: true)
 
