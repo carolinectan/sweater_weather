@@ -1,10 +1,20 @@
 class Api::V1::SessionsController < ApplicationController
   def create
-    user = User.find_by_email(session_params[:email])
+      user = User.find_by_email(session_params[:email])
 
-    return unless user.authenticate(session_params[:password])
+      if user.authenticate(session_params[:password])
+        render json: SessionSerializer.authenticated_user(user), status: :ok
+      else
+        bad_credentials_error
+      end
+  end
 
-    render json: SessionSerializer.authenticated_user(user)
+  def bad_credentials_error
+    render json: {
+      message: 'Your request could not be completed.',
+      errors: ['Bad credentials.']
+    },
+           status: :bad_request
   end
 
   private
