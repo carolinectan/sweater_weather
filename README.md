@@ -74,13 +74,120 @@ GET /api/v1/forecast?location=denver,co
 Content-Type: application/json
 Accept: application/json
 ```
-
+#### 200 Response
+```
+{:data=>
+  {:id=>nil,
+   :type=>"forecast",
+   :attributes=>
+    {:current_weather=>
+      {:datetime=>"2021-09-28 23:45:49 UTC",
+       :sunrise=>"2021-09-28 12:53:27 UTC",
+       :sunset=>"2021-09-29 00:47:23 UTC",
+       :temperature=>72.21,
+       :feels_like=>70.74,
+       :humidity=>34,
+       :uvi=>0.24,
+       :visibility=>10000,
+       :conditions=>"scattered clouds",
+       :icon=>"03d"},
+     :daily_weather=>
+      [{:date=>"2021-09-28 18:00:00 UTC",
+        :sunrise=>"2021-09-28 12:53:27 UTC",
+        :sunset=>"2021-09-29 00:47:23 UTC",
+        :max_temp=>80.42,
+        :min_temp=>66.81,
+        :conditions=>"scattered clouds",
+        :icon=>"03d"},
+       {:date=>"2021-09-29 18:00:00 UTC",
+        :sunrise=>"2021-09-29 12:54:24 UTC",
+        :sunset=>"2021-09-30 00:45:45 UTC",
+        :max_temp=>71.64,
+        :min_temp=>51.89,
+        :conditions=>"heavy intensity rain",
+        :icon=>"10d"},
+       {:date=>"2021-09-30 18:00:00 UTC",
+        :sunrise=>"2021-09-30 12:55:21 UTC",
+        :sunset=>"2021-10-01 00:44:07 UTC",
+        :max_temp=>60.91,
+        :min_temp=>50.45,
+        :conditions=>"moderate rain",
+        :icon=>"10d"},
+       {:date=>"2021-10-01 18:00:00 UTC",
+        :sunrise=>"2021-10-01 12:56:19 UTC",
+        :sunset=>"2021-10-02 00:42:29 UTC",
+        :max_temp=>69.57,
+        :min_temp=>53.56,
+        :conditions=>"few clouds",
+        :icon=>"02d"},
+       {:date=>"2021-10-02 18:00:00 UTC",
+        :sunrise=>"2021-10-02 12:57:16 UTC",
+        :sunset=>"2021-10-03 00:40:52 UTC",
+        :max_temp=>72.86,
+        :min_temp=>57.49,
+        :conditions=>"clear sky",
+        :icon=>"01d"}],
+     :hourly_weather=>
+      [{:time=>"2021-09-28 23:00:00 UTC",
+        :temperature=>73.49,
+        :conditions=>"scattered clouds",
+        :icon=>"03d"},
+       {:time=>"2021-09-29 00:00:00 UTC",
+        :temperature=>72.21,
+        :conditions=>"scattered clouds",
+        :icon=>"03d"},
+       {:time=>"2021-09-29 01:00:00 UTC",
+        :temperature=>71.85,
+        :conditions=>"scattered clouds",
+        :icon=>"03n"},
+       {:time=>"2021-09-29 02:00:00 UTC",
+        :temperature=>70.9,
+        :conditions=>"broken clouds",
+        :icon=>"04n"},
+       {:time=>"2021-09-29 03:00:00 UTC",
+        :temperature=>70.3,
+        :conditions=>"broken clouds",
+        :icon=>"04n"},
+       {:time=>"2021-09-29 04:00:00 UTC",
+        :temperature=>68.7,
+        :conditions=>"broken clouds",
+        :icon=>"04n"},
+       {:time=>"2021-09-29 05:00:00 UTC",
+        :temperature=>66.81,
+        :conditions=>"overcast clouds",
+        :icon=>"04n"},
+       {:time=>"2021-09-29 06:00:00 UTC",
+        :temperature=>65.86,
+        :conditions=>"overcast clouds",
+        :icon=>"04n"}]}}}
+```
 ### Background Image for a City
 #### Request
 ```
 GET /api/v1/forecast?location=denver,co
 Content-Type: application/json
 Accept: application/json
+```
+#### 200 Response
+```
+{:data=>
+  {:id=>nil,
+   :type=>"image",
+   :attributes=>
+    {:image=>
+      {:description=>
+        {:description=>"Night Time Downtown Denver",
+         :alt_description=>"city skyline during night time",
+         :location=>"denver,co"},
+       :image_url=>
+        "https://images.unsplash.com/photo-1619856699906-09e1f58c98b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyNjM0MTR8MHwxfHNlYXJjaHwxfHxkZW52ZXIlMkNjb3xlbnwxfDB8fHwxNjMyODU0NDU1&ixlib=rb-1.2.1&q=80&w=1080",
+       :credit=>
+        {:source=>"upsplash.com",
+         :photographer=>"Ryan De Hamer",
+         :profile=>"https://unsplash.com/@rdehamer",
+         :logo=>"https://unsplash.com/blog/content/images/max/2560/1-VnKoValwGK3-d1bZhD6sVA.jpeg",
+         :utm_source=>"Sweater Weather",
+         :utm_medium=>"referral"}}}}}
 ```
 
 ### Book Search
