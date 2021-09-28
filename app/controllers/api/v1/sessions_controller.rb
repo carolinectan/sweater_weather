@@ -3,12 +3,8 @@ class Api::V1::SessionsController < ApplicationController
     user = User.find_by_email(session_params[:email])
 
     if user.authenticate(session_params[:password])
-      UserSerializer.authenticated_user
+      render json: SessionSerializer.authenticated_user(user)
     end
-
-    # if user.password_digest == session_params[:password]
-    #   give_token
-    # end
   end
 
   private
