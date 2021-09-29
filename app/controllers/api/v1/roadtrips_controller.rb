@@ -6,7 +6,7 @@ class Api::V1::RoadtripsController < ApplicationController
       bad_credentials_error
     elsif RoadtripFacade.get_roadtrip(roadtrip_params[:origin],
                                       roadtrip_params[:destination]) == 402
-      render json: impossible_route
+      render json: RoadtripSerializer.impossible_route(roadtrip_params)
     else
       roadtrip = RoadtripFacade.get_roadtrip(roadtrip_params[:origin],
                                              roadtrip_params[:destination])
@@ -22,26 +22,7 @@ class Api::V1::RoadtripsController < ApplicationController
       message: 'Your request could not be completed.',
       errors: ['Bad credentials.']
     },
-           status: :unauthorized # 401
-  end
-
-  def impossible_route
-    null = nil
-    {
-      data: {
-        id: null,
-        type: 'roadtrip',
-        attributes: {
-          start_city: roadtrip_params[:origin],
-          end_city: roadtrip_params[:destination],
-          travel_time: 'Impossible route',
-          weather_at_eta: {
-            temperature: null,
-            conditions: null
-          }
-        }
-      }
-    }
+           status: :unauthorized
   end
 
   private

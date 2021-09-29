@@ -1,4 +1,4 @@
-class Api::V1::UserSerializer
+class UserSerializer
   include FastJsonapi::ObjectSerializer
 
   def self.generate_api_key(new_user)

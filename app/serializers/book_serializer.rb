@@ -1,4 +1,6 @@
-class Api::V1::BookSerializer
+class BookSerializer
+  include FastJsonapi::ObjectSerializer
+
   def self.find_books(location, quantity, books, forecast)
     null = nil
     {

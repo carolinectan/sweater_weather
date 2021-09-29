@@ -1,4 +1,4 @@
-class Api::V1::ForecastSerializer
+class ForecastSerializer
   include FastJsonapi::ObjectSerializer
 
   def self.get_weather(forecast)

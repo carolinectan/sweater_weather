@@ -1,4 +1,6 @@
-class Api::V1::RoadtripSerializer
+class RoadtripSerializer
+  include FastJsonapi::ObjectSerializer
+
   def self.get_roadtrip(roadtrip, destination_weather)
     null = nil
     {
@@ -18,22 +20,22 @@ class Api::V1::RoadtripSerializer
     }
   end
 
-  # def self.impossible_route(roadtrip_params)
-  #   null = nil
-  #   {
-  #     data: {
-  #       id: null,
-  #       type: 'roadtrip',
-  #       attributes: {
-  #         start_city: roadtrip_params[:origin],
-  #         end_city: roadtrip_params[:destination],
-  #         travel_time: 'Impossible route',
-  #         weather_at_eta: {
-  #           temperature: null,
-  #           conditions: null
-  #         }
-  #       }
-  #     }
-  #   }
-  # end
+  def self.impossible_route(roadtrip_params)
+    null = nil
+    {
+      data: {
+        id: null,
+        type: 'roadtrip',
+        attributes: {
+          start_city: roadtrip_params[:origin],
+          end_city: roadtrip_params[:destination],
+          travel_time: 'Impossible route',
+          weather_at_eta: {
+            temperature: null,
+            conditions: null
+          }
+        }
+      }
+    }
+  end
 end

@@ -1,4 +1,4 @@
-class Api::V1::SessionSerializer
+class SessionSerializer
   include FastJsonapi::ObjectSerializer
 
   def self.authenticated_user(user)
