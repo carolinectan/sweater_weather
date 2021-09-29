@@ -161,6 +161,9 @@ Accept: application/json
         :conditions=>"overcast clouds",
         :icon=>"04n"}]}}}
 ```
+
+<hr>
+
 ### Background Image for a City
 #### Request
 ```
@@ -189,6 +192,8 @@ Accept: application/json
          :utm_source=>"Sweater Weather",
          :utm_medium=>"referral"}}}}}
 ```
+
+<hr>
 
 ### Book Search
 #### Request
@@ -220,6 +225,8 @@ Accept: application/json
         :publisher=>["American Map Corporation"]}]}}}
 ```
 
+<hr>
+
 ### User Registration
 #### Request
 ```
@@ -234,6 +241,13 @@ Accept: application/json
 }
 ```
 #### 200 Response
+```
+{:data=>
+  {:type=>"users",
+   :id=>"867",
+   :attributes=>{:email=>"whatever@example.com", :api_key=>"WIcWZskO4ZFxvrcQz9Sh2ZOMfjI"}}}
+```
+<hr>
 
 ### Login
 #### Request
@@ -254,6 +268,8 @@ Accept: application/json
    :id=>"853",
    :attributes=>{:email=>"whatever@example.com", :api_key=>"k3d6U8Yb8530E35dbdkFF954Aaa"}}}
 ```
+
+<hr>
 
 ### Road Trip
 #### Request
