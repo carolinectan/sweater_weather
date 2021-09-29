@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe RoadtripFacade do
   describe 'class methods' do
-    describe '.find_lat_long' do
+    describe '.get_roadtrip' do
       context 'happy path' do
         it 'returns a roadtrip object', :vcr do
           origin = 'denver,co'
