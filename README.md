@@ -302,6 +302,6 @@ body:
    :attributes=>
     {:start_city=>"New York,NY",
      :end_city=>"Los Angeles,CA",
-     :travel_time=>"40 hour(s), 34 minute(s)",
-     :weather_at_eta=>{:temperature=>69.78, :conditions=>"clear sky"}}}}
+     :travel_time=>"40 hr, 34 min",
+     :weather_at_eta=>{:temperature=>73.63, :conditions=>"clear sky"}}}}
 ```
