@@ -1,10 +1,11 @@
-class Api::V1::ForecastSerializer
+class ForecastSerializer
   include FastJsonapi::ObjectSerializer
 
   def self.get_weather(forecast)
+    null = nil
     {
       data: {
-        id: nil,
+        id: null,
         type: 'forecast',
         attributes: {
           current_weather: {

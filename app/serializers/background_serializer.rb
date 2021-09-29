@@ -1,4 +1,4 @@
-class Api::V1::BackgroundSerializer
+class BackgroundSerializer
   include FastJsonapi::ObjectSerializer
 
   def self.get_background(background, location)

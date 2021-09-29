@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.mapquestapi.com/directions/v2/route?ambiguities=ignore&avoidTimedConditions=false&doReverseGeocode=false&enhancedNarrative=false&from=New%20York,NY&key=DONT_SHARE_MY_SECRET_KEY&outFormat=json&routeType=fastest&to=London,%20UK
+    uri: https://www.mapquestapi.com/directions/v2/route?ambiguities=ignore&avoidTimedConditions=false&doReverseGeocode=false&enhancedNarrative=false&from=denver,co&key=DONT_SHARE_MY_SECRET_KEY&outFormat=json&routeType=fastest&to=london,uk
     body:
       encoding: US-ASCII
       string: ''
@@ -19,17 +19,17 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Wed, 29 Sep 2021 06:45:21 GMT
+      - Wed, 29 Sep 2021 06:45:15 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Content-Length:
       - '278'
       Set-Cookie:
-      - JSESSIONID=30539986E9A2A6934F080A5DE83EF508; Path=/directions; HttpOnly; Secure
+      - JSESSIONID=C8082FD14DDA6E39E38DE83D288B1759; Path=/directions; HttpOnly; Secure
       Expires:
       - Mon, 20 Dec 1998 01:00:00 GMT
       Last-Modified:
-      - Wed, 29 Sep 2021 06:45:21 GMT
+      - Wed, 29 Sep 2021 06:45:15 GMT
       Cache-Control:
       - no-cache, must-revalidate
       Pragma:
@@ -48,5 +48,5 @@ http_interactions:
       encoding: ASCII-8BIT
       string: !binary |-
         eyJyb3V0ZSI6eyJyb3V0ZUVycm9yIjp7ImVycm9yQ29kZSI6MiwibWVzc2FnZSI6IiJ9fSwiaW5mbyI6eyJzdGF0dXNjb2RlIjo0MDIsImNvcHlyaWdodCI6eyJpbWFnZUFsdFRleHQiOiLCqSAyMDIxIE1hcFF1ZXN0LCBJbmMuIiwiaW1hZ2VVcmwiOiJodHRwOi8vYXBpLm1xY2RuLmNvbS9yZXMvbXFsb2dvLmdpZiIsInRleHQiOiLCqSAyMDIxIE1hcFF1ZXN0LCBJbmMuIn0sIm1lc3NhZ2VzIjpbIldlIGFyZSB1bmFibGUgdG8gcm91dGUgd2l0aCB0aGUgZ2l2ZW4gbG9jYXRpb25zLiJdfX0=
-  recorded_at: Wed, 29 Sep 2021 06:45:21 GMT
+  recorded_at: Wed, 29 Sep 2021 06:45:15 GMT
 recorded_with: VCR 6.0.0

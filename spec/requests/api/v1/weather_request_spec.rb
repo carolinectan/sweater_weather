@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'Weather API' do
-  it 'sends the forcast for a given city and state', :vcr do
+  it 'sends the forecast for a given city and state', :vcr do
     location = { location: 'denver,co' }
     headers = { CONTENT_TYPE: 'application/json', Accept: 'application/json' }
 
