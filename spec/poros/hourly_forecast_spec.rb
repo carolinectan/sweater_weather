@@ -3,20 +3,21 @@ require 'rails_helper'
 RSpec.describe HourlyForecast do
   it 'can initialize from hourly forecast params' do
     hourly_forecast_params = {
-      :dt=>1632888000,
-      :temp=>61.56,
-      :feels_like=>59.52,
-      :pressure=>1003,
-      :humidity=>45,
-      :dew_point=>40.05,
-      :uvi=>0,
-      :clouds=>81,
-      :visibility=>10000,
-      :wind_speed=>6.64,
-      :wind_deg=>212,
-      :wind_gust=>8.16,
-      :weather=>[{:id=>803, :main=>"Clouds", :description=>"broken clouds", :icon=>"04n"}],
-      :pop=>0.47}
+      dt: 1_632_888_000,
+      temp: 61.56,
+      feels_like: 59.52,
+      pressure: 1003,
+      humidity: 45,
+      dew_point: 40.05,
+      uvi: 0,
+      clouds: 81,
+      visibility: 10_000,
+      wind_speed: 6.64,
+      wind_deg: 212,
+      wind_gust: 8.16,
+      weather: [{ id: 803, main: 'Clouds', description: 'broken clouds', icon: '04n' }],
+      pop: 0.47
+    }
 
     hourly = HourlyForecast.new(hourly_forecast_params)
 

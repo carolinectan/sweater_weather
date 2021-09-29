@@ -4,7 +4,9 @@ RSpec.describe ForecastService do
   describe 'class methods' do
     describe '.get_forecast' do
       it 'returns forecast based on location', :vcr do
-        forecast = ForecastService.get_forecast('denver,co')
+        location = LocationFacade.find_lat_long('denver,co')
+
+        forecast = ForecastService.get_forecast(location)
 
         expect(forecast).to be_a Hash
         expect(forecast).to have_key(:lat)
@@ -18,11 +20,11 @@ RSpec.describe ForecastService do
         expect(forecast).to have_key(:current)
         expect(forecast[:current]).to be_a Hash
         expect(forecast).to have_key(:hourly)
-        expect(forecast[:hourly]).to be_a Hash
+        expect(forecast[:hourly]).to be_an Array
         expect(forecast).to have_key(:daily)
-        expect(forecast[:daily]).to be_a Hash
-        end
+        expect(forecast[:daily]).to be_an Array
       end
+    end
 
     describe '.get_conn' do
       it 'returns a Faraday object for a forecast', :vcr do

@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Location do
   it 'can initialize from location params' do
-    location_params = {:lat=>39.738453, :lng=>-104.984853}
+    location_params = { lat: 39.738453, lng: -104.984853 }
 
     location = Location.new(location_params)
 

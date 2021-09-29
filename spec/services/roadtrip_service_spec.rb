@@ -10,17 +10,17 @@ RSpec.describe RoadtripService do
         expect(roadtrip).to have_key(:route)
         expect(roadtrip[:route]).to be_a Hash
         expect(roadtrip[:route]).to have_key(:hasTollRoad)
-        expect(roadtrip[:route][:hasTollRoad]).to be_in([true,false])
+        expect(roadtrip[:route][:hasTollRoad]).to be_in([true, false])
         expect(roadtrip[:route]).to have_key(:hasBridge)
-        expect(roadtrip[:route][:hasBridge]).to be_in([true,false])
+        expect(roadtrip[:route][:hasBridge]).to be_in([true, false])
         expect(roadtrip[:route]).to have_key(:boundingBox)
         expect(roadtrip[:route][:boundingBox]).to be_a Hash
         expect(roadtrip[:route]).to have_key(:distance)
         expect(roadtrip[:route][:distance]).to be_a Numeric
         expect(roadtrip[:route]).to have_key(:hasTunnel)
-        expect(roadtrip[:route][:hasTunnel]).to be_in([true,false])
+        expect(roadtrip[:route][:hasTunnel]).to be_in([true, false])
         expect(roadtrip[:route]).to have_key(:hasHighway)
-        expect(roadtrip[:route][:hasHighway]).to be_in([true,false])
+        expect(roadtrip[:route][:hasHighway]).to be_in([true, false])
         expect(roadtrip[:route]).to have_key(:computedWaypoints)
         expect(roadtrip[:route][:computedWaypoints]).to be_an Array
         expect(roadtrip[:route]).to have_key(:routeError)
@@ -32,7 +32,7 @@ RSpec.describe RoadtripService do
         expect(roadtrip[:route]).to have_key(:realTime)
         expect(roadtrip[:route][:realTime]).to be_a Numeric
         expect(roadtrip[:route]).to have_key(:hasSeasonalClosure)
-        expect(roadtrip[:route][:hasSeasonalClosure]).to be_in([true,false])
+        expect(roadtrip[:route][:hasSeasonalClosure]).to be_in([true, false])
         expect(roadtrip[:route]).to have_key(:fuelUsed)
         expect(roadtrip[:route][:fuelUsed]).to be_a Numeric
         expect(roadtrip[:route]).to have_key(:legs)

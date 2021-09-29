@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe RoadtripFacade do
   describe 'class methods' do
     describe '.get_roadtrip' do
-      context 'happy path' do
+      describe 'happy path' do
         it 'returns a roadtrip object', :vcr do
           origin = 'denver,co'
           destination = 'pueblo,co'
@@ -14,7 +14,7 @@ RSpec.describe RoadtripFacade do
         end
       end
 
-      context 'sad path' do
+      describe 'sad path' do
         it 'returns an status code', :vcr do
           origin = 'denver,co'
           destination = 'london,uk'
