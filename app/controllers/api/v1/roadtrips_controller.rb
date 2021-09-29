@@ -4,13 +4,16 @@ class Api::V1::RoadtripsController < ApplicationController
 
     if user.nil? || params[:api_key].nil?
       bad_credentials_error
-    elsif RoadtripFacade.get_roadtrip(roadtrip_params[:origin], roadtrip_params[:destination]) == 402
+    elsif RoadtripFacade.get_roadtrip(roadtrip_params[:origin],
+                                      roadtrip_params[:destination]) == 402
       render json: impossible_route
     else
-      roadtrip = RoadtripFacade.get_roadtrip(roadtrip_params[:origin], roadtrip_params[:destination])
+      roadtrip = RoadtripFacade.get_roadtrip(roadtrip_params[:origin],
+                                             roadtrip_params[:destination])
       destination = LocationFacade.find_lat_long(roadtrip_params[:destination])
       destination_weather = ForecastFacade.get_hourly_only(destination)
-      render json: RoadtripSerializer.get_roadtrip(roadtrip, destination_weather)
+      render json: RoadtripSerializer.get_roadtrip(roadtrip,
+                                                   destination_weather)
     end
   end
 

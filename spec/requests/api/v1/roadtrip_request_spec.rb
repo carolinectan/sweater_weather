@@ -77,8 +77,8 @@ describe 'Roadtrip API' do
   it 'sends a 401 if the api key does not match one in the database', :vcr do
     headers = { CONTENT_TYPE: 'application/json', Accept: 'application/json' }
     request_body = {
-      origin: 'Denver,CO',
-      destination: 'Pueblo,CO',
+      origin: 'Fort Collins,CO',
+      destination: 'Boulder,CO',
       api_key: 'jgn983hy48thw9begh98h4539h4'
     }
 
