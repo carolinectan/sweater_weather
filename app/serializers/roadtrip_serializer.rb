@@ -1,7 +1,7 @@
 class RoadtripSerializer
   include FastJsonapi::ObjectSerializer
 
-  def self.get_roadtrip(roadtrip, destination_weather)
+  def self.get_roadtrip(roadtrip, weather)
     null = nil
     {
       data: {
@@ -10,10 +10,10 @@ class RoadtripSerializer
         attributes: {
           start_city: roadtrip.origin,
           end_city: roadtrip.destination,
-          travel_time: "#{roadtrip.travel_time.split(':')[0].to_i} hour(s), #{roadtrip.travel_time.split(':')[1].to_i} minute(s)",
+          travel_time: "#{roadtrip.travel_hr} hr, #{roadtrip.travel_min} min",
           weather_at_eta: {
-            temperature: destination_weather[roadtrip.travel_time.split(':')[0].to_i - 1].temperature,
-            conditions: destination_weather[roadtrip.travel_time.split(':')[1].to_i - 1].conditions
+            temperature: weather[roadtrip.travel_hr - 1].temperature,
+            conditions: weather[roadtrip.travel_hr - 1].conditions
           }
         }
       }
