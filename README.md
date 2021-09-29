@@ -191,8 +191,34 @@ Accept: application/json
 ```
 
 ### Book Search
-- Request
-- `GET /api/v1/book-search?location=denver,co&quantity=5`
+#### Request
+```GET /api/v1/book-search?location=denver,co&quantity=5```
+#### Response
+```
+{:data=>
+  {:id=>nil,
+   :type=>"books",
+   :attributes=>
+    {:destination=>"denver,co",
+     :forecast=>{:summary=>"broken clouds", :temperature=>"70.99 F"},
+     :total_books_found=>5,
+     :books=>
+      [{:isbn=>["9780762507849", "0762507845"],
+        :title=>"Denver, Co",
+        :publisher=>["Universal Map Enterprises"]},
+       {:isbn=>["1427401683", "9781427401687"],
+        :title=>"University of Denver Co 2007",
+        :publisher=>["College Prowler"]},
+       {:isbn=>["9780762557363", "0762557362"],
+        :title=>"Denver Co Deluxe Flip Map",
+        :publisher=>["Universal Map Enterprises"]},
+       {:isbn=>["9780883183663", "0883183668"],
+        :title=>"Photovoltaic safety, Denver, CO, 1988",
+        :publisher=>["American Institute of Physics"]},
+       {:isbn=>["9812582622", "9789812582621"],
+        :title=>"Insight Fleximap Denver, CO (Insight Fleximaps)",
+        :publisher=>["American Map Corporation"]}]}}}
+```
 
 ### User Registration
 #### Request
@@ -207,6 +233,7 @@ Accept: application/json
   "password_confirmation": "password"
 }
 ```
+#### 200 Response
 
 ### Login
 #### Request
@@ -219,6 +246,13 @@ Accept: application/json
   "email": "whatever@example.com",
   "password": "password"
 }
+```
+#### 200 Response
+```
+{:data=>
+  {:type=>"users",
+   :id=>"853",
+   :attributes=>{:email=>"whatever@example.com", :api_key=>"k3d6U8Yb8530E35dbdkFF954Aaa"}}}
 ```
 
 ### Road Trip
@@ -235,4 +269,15 @@ body:
   "destination": "Pueblo,CO",
   "api_key": "jgn983hy48thw9begh98h4539h4"
 }
+```
+#### 200 Response
+```
+{:data=>
+  {:id=>nil,
+   :type=>"roadtrip",
+   :attributes=>
+    {:start_city=>"New York,NY",
+     :end_city=>"Los Angeles,CA",
+     :travel_time=>"40 hour(s), 34 minute(s)",
+     :weather_at_eta=>{:temperature=>69.78, :conditions=>"clear sky"}}}}
 ```
