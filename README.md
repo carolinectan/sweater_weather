@@ -16,6 +16,12 @@ Sweather Weather consumes the MapQuest Developer API, the Open Weather Map API, 
 - [How to Run the Test Suite](#how-to-run-the-test-suite)
 <!-- - [Screenshots](#screenshots) -->
 - [Endpoints](#endpoints)
+  - [Retrieve Weather for a City](retrieve-weather-for-a-city)
+  - [Background Image for a City](background-image-for-a-city)
+  - [Book Search](book-search)
+  - [User Registration](user-registration)
+  - [Login](login)
+  - [Road Trip](road-trip)
 
 ## Technologies
 |Development|Development|Testing
@@ -197,7 +203,9 @@ Accept: application/json
 
 ### Book Search
 #### Request
-```GET /api/v1/book-search?location=denver,co&quantity=5```
+```
+GET /api/v1/book-search?location=denver,co&quantity=5
+```
 #### Response
 ```
 {:data=>
