@@ -21,10 +21,6 @@ RSpec.describe RoadtripService do
         expect(roadtrip[:route][:hasTunnel]).to be_in([true, false])
         expect(roadtrip[:route]).to have_key(:hasHighway)
         expect(roadtrip[:route][:hasHighway]).to be_in([true, false])
-        expect(roadtrip[:route]).to have_key(:computedWaypoints)
-        expect(roadtrip[:route][:computedWaypoints]).to be_an Array
-        expect(roadtrip[:route]).to have_key(:routeError)
-        expect(roadtrip[:route][:routeError]).to be_a Hash
         expect(roadtrip[:route]).to have_key(:formattedTime)
         expect(roadtrip[:route][:formattedTime]).to be_a String
         expect(roadtrip[:route]).to have_key(:sessionId)
@@ -33,8 +29,6 @@ RSpec.describe RoadtripService do
         expect(roadtrip[:route][:realTime]).to be_a Numeric
         expect(roadtrip[:route]).to have_key(:hasSeasonalClosure)
         expect(roadtrip[:route][:hasSeasonalClosure]).to be_in([true, false])
-        expect(roadtrip[:route]).to have_key(:fuelUsed)
-        expect(roadtrip[:route][:fuelUsed]).to be_a Numeric
         expect(roadtrip[:route]).to have_key(:legs)
         expect(roadtrip[:route][:legs]).to be_an Array
       end

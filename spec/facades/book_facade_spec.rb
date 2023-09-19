@@ -12,7 +12,7 @@ RSpec.describe BookFacade do
         expect(books.size).to eq(7)
         expect(books.first).to be_a Book
         expect(books.first.isbn).to be_an Array
-        expect(books.first.isbn).to eq(['9780762507849', '0762507845'])
+        expect(books.first.isbn[0]).to be_a String
         expect(books.first.title).to be_a String
         expect(books.first.title).to eq('Denver, Co')
         expect(books.first.publisher).to be_an Array

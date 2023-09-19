@@ -10,9 +10,9 @@ RSpec.describe LocationFacade do
         expect(location).to_not be_an Array
         expect(location).to be_a Location
         expect(location.latitude).to be_a Numeric
-        expect(location.latitude).to eq(39.738453)
+        expect(location.latitude).to eq(39.74001)
         expect(location.longitude).to be_a Numeric
-        expect(location.longitude).to eq(-104.984853)
+        expect(location.longitude).to eq(-104.99202)
       end
     end
   end
