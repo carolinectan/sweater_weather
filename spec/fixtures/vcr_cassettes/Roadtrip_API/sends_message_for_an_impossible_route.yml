@@ -49,4 +49,752 @@ http_interactions:
       string: !binary |-
         eyJyb3V0ZSI6eyJyb3V0ZUVycm9yIjp7ImVycm9yQ29kZSI6MiwibWVzc2FnZSI6IiJ9fSwiaW5mbyI6eyJzdGF0dXNjb2RlIjo0MDIsImNvcHlyaWdodCI6eyJpbWFnZUFsdFRleHQiOiLCqSAyMDIxIE1hcFF1ZXN0LCBJbmMuIiwiaW1hZ2VVcmwiOiJodHRwOi8vYXBpLm1xY2RuLmNvbS9yZXMvbXFsb2dvLmdpZiIsInRleHQiOiLCqSAyMDIxIE1hcFF1ZXN0LCBJbmMuIn0sIm1lc3NhZ2VzIjpbIldlIGFyZSB1bmFibGUgdG8gcm91dGUgd2l0aCB0aGUgZ2l2ZW4gbG9jYXRpb25zLiJdfX0=
   recorded_at: Wed, 29 Sep 2021 14:09:07 GMT
-recorded_with: VCR 6.0.0
+- request:
+    method: get
+    uri: https://www.mapquestapi.com/directions/v2/route?ambiguities=ignore&avoidTimedConditions=false&doReverseGeocode=false&enhancedNarrative=false&from=New%20York,NY&key=DONT_SHARE_MY_SECRET_KEY&outFormat=json&routeType=fastest&to=London,%20UK
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Date:
+      - Tue, 19 Sep 2023 04:37:32 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Content-Length:
+      - '50'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Powered-By:
+      - MapQuest
+    body:
+      encoding: UTF-8
+      string: The AppKey submitted with this request is invalid.
+  recorded_at: Tue, 19 Sep 2023 04:37:32 GMT
+- request:
+    method: get
+    uri: https://www.mapquestapi.com/directions/v2/route?ambiguities=ignore&avoidTimedConditions=false&doReverseGeocode=false&enhancedNarrative=false&from=New%20York,NY&key=DONT_SHARE_MY_SECRET_KEY&outFormat=json&routeType=fastest&to=London,%20UK
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 19 Sep 2023 04:58:20 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '278'
+      Connection:
+      - keep-alive
+      X-Ratelimit-Limit-2628000:
+      - '15000'
+      X-Ratelimit-Remaining-2628000:
+      - '14983'
+      Ratelimit-Limit:
+      - '15000'
+      Ratelimit-Remaining:
+      - '14983'
+      Ratelimit-Reset:
+      - '2588500'
+      X-Powered-By:
+      - MapQuest
+      X-Request-Id:
+      - 273dfe20-56a9-11ee-93f1-034b5dfb1fdb
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Transaction-Count:
+      - all=3,geocoding=2,directions=1
+      Etag:
+      - W/"116-iBjgnQxNGqjY6sVCYaem2XJ/c3Q"
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJyb3V0ZSI6eyJyb3V0ZUVycm9yIjp7ImVycm9yQ29kZSI6MiwibWVzc2FnZSI6IiJ9fSwiaW5mbyI6eyJzdGF0dXNjb2RlIjo0MDIsImNvcHlyaWdodCI6eyJ0ZXh0IjoiwqkgMjAyMyBNYXBRdWVzdCwgSW5jLiIsImltYWdlVXJsIjoiaHR0cDovL2FwaS5tcWNkbi5jb20vcmVzL21xbG9nby5naWYiLCJpbWFnZUFsdFRleHQiOiLCqSAyMDIzIE1hcFF1ZXN0LCBJbmMuIn0sIm1lc3NhZ2VzIjpbIldlIGFyZSB1bmFibGUgdG8gcm91dGUgd2l0aCB0aGUgZ2l2ZW4gbG9jYXRpb25zLiJdfX0=
+  recorded_at: Tue, 19 Sep 2023 04:58:20 GMT
+- request:
+    method: get
+    uri: https://www.mapquestapi.com/directions/v2/route?ambiguities=ignore&avoidTimedConditions=false&doReverseGeocode=false&enhancedNarrative=false&from=New%20York,NY&key=DONT_SHARE_MY_SECRET_KEY&outFormat=json&routeType=fastest&to=London,%20UK
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 19 Sep 2023 05:02:16 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '278'
+      Connection:
+      - keep-alive
+      X-Ratelimit-Limit-2628000:
+      - '15000'
+      X-Ratelimit-Remaining-2628000:
+      - '14959'
+      Ratelimit-Limit:
+      - '15000'
+      Ratelimit-Remaining:
+      - '14959'
+      Ratelimit-Reset:
+      - '2588264'
+      X-Powered-By:
+      - MapQuest
+      X-Request-Id:
+      - b43b7000-56a9-11ee-abe1-fde527625859
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Transaction-Count:
+      - all=3,geocoding=2,directions=1
+      Etag:
+      - W/"116-iBjgnQxNGqjY6sVCYaem2XJ/c3Q"
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJyb3V0ZSI6eyJyb3V0ZUVycm9yIjp7ImVycm9yQ29kZSI6MiwibWVzc2FnZSI6IiJ9fSwiaW5mbyI6eyJzdGF0dXNjb2RlIjo0MDIsImNvcHlyaWdodCI6eyJ0ZXh0IjoiwqkgMjAyMyBNYXBRdWVzdCwgSW5jLiIsImltYWdlVXJsIjoiaHR0cDovL2FwaS5tcWNkbi5jb20vcmVzL21xbG9nby5naWYiLCJpbWFnZUFsdFRleHQiOiLCqSAyMDIzIE1hcFF1ZXN0LCBJbmMuIn0sIm1lc3NhZ2VzIjpbIldlIGFyZSB1bmFibGUgdG8gcm91dGUgd2l0aCB0aGUgZ2l2ZW4gbG9jYXRpb25zLiJdfX0=
+  recorded_at: Tue, 19 Sep 2023 05:02:16 GMT
+- request:
+    method: get
+    uri: https://www.mapquestapi.com/directions/v2/route?ambiguities=ignore&avoidTimedConditions=false&doReverseGeocode=false&enhancedNarrative=false&from=New%20York,NY&key=DONT_SHARE_MY_SECRET_KEY&outFormat=json&routeType=fastest&to=London,%20UK
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 19 Sep 2023 05:02:30 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '278'
+      Connection:
+      - keep-alive
+      X-Ratelimit-Limit-2628000:
+      - '15000'
+      X-Ratelimit-Remaining-2628000:
+      - '14940'
+      Ratelimit-Limit:
+      - '15000'
+      Ratelimit-Remaining:
+      - '14940'
+      Ratelimit-Reset:
+      - '2588250'
+      X-Powered-By:
+      - MapQuest
+      X-Request-Id:
+      - bc7f5fb0-56a9-11ee-a780-6d3c70039e05
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Transaction-Count:
+      - all=3,geocoding=2,directions=1
+      Etag:
+      - W/"116-iBjgnQxNGqjY6sVCYaem2XJ/c3Q"
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJyb3V0ZSI6eyJyb3V0ZUVycm9yIjp7ImVycm9yQ29kZSI6MiwibWVzc2FnZSI6IiJ9fSwiaW5mbyI6eyJzdGF0dXNjb2RlIjo0MDIsImNvcHlyaWdodCI6eyJ0ZXh0IjoiwqkgMjAyMyBNYXBRdWVzdCwgSW5jLiIsImltYWdlVXJsIjoiaHR0cDovL2FwaS5tcWNkbi5jb20vcmVzL21xbG9nby5naWYiLCJpbWFnZUFsdFRleHQiOiLCqSAyMDIzIE1hcFF1ZXN0LCBJbmMuIn0sIm1lc3NhZ2VzIjpbIldlIGFyZSB1bmFibGUgdG8gcm91dGUgd2l0aCB0aGUgZ2l2ZW4gbG9jYXRpb25zLiJdfX0=
+  recorded_at: Tue, 19 Sep 2023 05:02:30 GMT
+- request:
+    method: get
+    uri: https://www.mapquestapi.com/directions/v2/route?ambiguities=ignore&avoidTimedConditions=false&doReverseGeocode=false&enhancedNarrative=false&from=New%20York,NY&key=DONT_SHARE_MY_SECRET_KEY&outFormat=json&routeType=fastest&to=London,%20UK
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 19 Sep 2023 05:04:36 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '278'
+      Connection:
+      - keep-alive
+      X-Ratelimit-Limit-2628000:
+      - '15000'
+      X-Ratelimit-Remaining-2628000:
+      - '14909'
+      Ratelimit-Limit:
+      - '15000'
+      Ratelimit-Remaining:
+      - '14909'
+      Ratelimit-Reset:
+      - '2588124'
+      X-Powered-By:
+      - MapQuest
+      X-Request-Id:
+      - '07344840-56aa-11ee-a780-6d3c70039e05'
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Transaction-Count:
+      - all=3,geocoding=2,directions=1
+      Etag:
+      - W/"116-iBjgnQxNGqjY6sVCYaem2XJ/c3Q"
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJyb3V0ZSI6eyJyb3V0ZUVycm9yIjp7ImVycm9yQ29kZSI6MiwibWVzc2FnZSI6IiJ9fSwiaW5mbyI6eyJzdGF0dXNjb2RlIjo0MDIsImNvcHlyaWdodCI6eyJ0ZXh0IjoiwqkgMjAyMyBNYXBRdWVzdCwgSW5jLiIsImltYWdlVXJsIjoiaHR0cDovL2FwaS5tcWNkbi5jb20vcmVzL21xbG9nby5naWYiLCJpbWFnZUFsdFRleHQiOiLCqSAyMDIzIE1hcFF1ZXN0LCBJbmMuIn0sIm1lc3NhZ2VzIjpbIldlIGFyZSB1bmFibGUgdG8gcm91dGUgd2l0aCB0aGUgZ2l2ZW4gbG9jYXRpb25zLiJdfX0=
+  recorded_at: Tue, 19 Sep 2023 05:04:36 GMT
+- request:
+    method: get
+    uri: https://www.mapquestapi.com/directions/v2/route?ambiguities=ignore&avoidTimedConditions=false&doReverseGeocode=false&enhancedNarrative=false&from=New%20York,NY&key=DONT_SHARE_MY_SECRET_KEY&outFormat=json&routeType=fastest&to=London,%20UK
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 19 Sep 2023 05:05:33 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '278'
+      Connection:
+      - keep-alive
+      X-Ratelimit-Limit-2628000:
+      - '15000'
+      X-Ratelimit-Remaining-2628000:
+      - '14886'
+      Ratelimit-Limit:
+      - '15000'
+      Ratelimit-Remaining:
+      - '14886'
+      Ratelimit-Reset:
+      - '2588067'
+      X-Powered-By:
+      - MapQuest
+      X-Request-Id:
+      - 297c38e0-56aa-11ee-b2a6-63c21c77a8a8
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Transaction-Count:
+      - all=3,geocoding=2,directions=1
+      Etag:
+      - W/"116-iBjgnQxNGqjY6sVCYaem2XJ/c3Q"
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJyb3V0ZSI6eyJyb3V0ZUVycm9yIjp7ImVycm9yQ29kZSI6MiwibWVzc2FnZSI6IiJ9fSwiaW5mbyI6eyJzdGF0dXNjb2RlIjo0MDIsImNvcHlyaWdodCI6eyJ0ZXh0IjoiwqkgMjAyMyBNYXBRdWVzdCwgSW5jLiIsImltYWdlVXJsIjoiaHR0cDovL2FwaS5tcWNkbi5jb20vcmVzL21xbG9nby5naWYiLCJpbWFnZUFsdFRleHQiOiLCqSAyMDIzIE1hcFF1ZXN0LCBJbmMuIn0sIm1lc3NhZ2VzIjpbIldlIGFyZSB1bmFibGUgdG8gcm91dGUgd2l0aCB0aGUgZ2l2ZW4gbG9jYXRpb25zLiJdfX0=
+  recorded_at: Tue, 19 Sep 2023 05:05:33 GMT
+- request:
+    method: get
+    uri: https://www.mapquestapi.com/directions/v2/route?ambiguities=ignore&avoidTimedConditions=false&doReverseGeocode=false&enhancedNarrative=false&from=New%20York,NY&key=DONT_SHARE_MY_SECRET_KEY&outFormat=json&routeType=fastest&to=London,%20UK
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 19 Sep 2023 05:06:13 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '278'
+      Connection:
+      - keep-alive
+      X-Ratelimit-Limit-2628000:
+      - '15000'
+      X-Ratelimit-Remaining-2628000:
+      - '14859'
+      Ratelimit-Limit:
+      - '15000'
+      Ratelimit-Remaining:
+      - '14859'
+      Ratelimit-Reset:
+      - '2588027'
+      X-Powered-By:
+      - MapQuest
+      X-Request-Id:
+      - 40ffd080-56aa-11ee-abe1-fde527625859
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Transaction-Count:
+      - all=3,geocoding=2,directions=1
+      Etag:
+      - W/"116-iBjgnQxNGqjY6sVCYaem2XJ/c3Q"
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJyb3V0ZSI6eyJyb3V0ZUVycm9yIjp7ImVycm9yQ29kZSI6MiwibWVzc2FnZSI6IiJ9fSwiaW5mbyI6eyJzdGF0dXNjb2RlIjo0MDIsImNvcHlyaWdodCI6eyJ0ZXh0IjoiwqkgMjAyMyBNYXBRdWVzdCwgSW5jLiIsImltYWdlVXJsIjoiaHR0cDovL2FwaS5tcWNkbi5jb20vcmVzL21xbG9nby5naWYiLCJpbWFnZUFsdFRleHQiOiLCqSAyMDIzIE1hcFF1ZXN0LCBJbmMuIn0sIm1lc3NhZ2VzIjpbIldlIGFyZSB1bmFibGUgdG8gcm91dGUgd2l0aCB0aGUgZ2l2ZW4gbG9jYXRpb25zLiJdfX0=
+  recorded_at: Tue, 19 Sep 2023 05:06:13 GMT
+- request:
+    method: get
+    uri: https://www.mapquestapi.com/directions/v2/route?ambiguities=ignore&avoidTimedConditions=false&doReverseGeocode=false&enhancedNarrative=false&from=New%20York,NY&key=DONT_SHARE_MY_SECRET_KEY&outFormat=json&routeType=fastest&to=London,%20UK
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 19 Sep 2023 05:06:49 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '278'
+      Connection:
+      - keep-alive
+      X-Ratelimit-Limit-2628000:
+      - '15000'
+      X-Ratelimit-Remaining-2628000:
+      - '14836'
+      Ratelimit-Limit:
+      - '15000'
+      Ratelimit-Remaining:
+      - '14836'
+      Ratelimit-Reset:
+      - '2587991'
+      X-Powered-By:
+      - MapQuest
+      X-Request-Id:
+      - 569f8cf0-56aa-11ee-abe1-fde527625859
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Transaction-Count:
+      - all=3,geocoding=2,directions=1
+      Etag:
+      - W/"116-iBjgnQxNGqjY6sVCYaem2XJ/c3Q"
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJyb3V0ZSI6eyJyb3V0ZUVycm9yIjp7ImVycm9yQ29kZSI6MiwibWVzc2FnZSI6IiJ9fSwiaW5mbyI6eyJzdGF0dXNjb2RlIjo0MDIsImNvcHlyaWdodCI6eyJ0ZXh0IjoiwqkgMjAyMyBNYXBRdWVzdCwgSW5jLiIsImltYWdlVXJsIjoiaHR0cDovL2FwaS5tcWNkbi5jb20vcmVzL21xbG9nby5naWYiLCJpbWFnZUFsdFRleHQiOiLCqSAyMDIzIE1hcFF1ZXN0LCBJbmMuIn0sIm1lc3NhZ2VzIjpbIldlIGFyZSB1bmFibGUgdG8gcm91dGUgd2l0aCB0aGUgZ2l2ZW4gbG9jYXRpb25zLiJdfX0=
+  recorded_at: Tue, 19 Sep 2023 05:06:49 GMT
+- request:
+    method: get
+    uri: https://www.mapquestapi.com/directions/v2/route?ambiguities=ignore&avoidTimedConditions=false&doReverseGeocode=false&enhancedNarrative=false&from=New%20York,NY&key=DONT_SHARE_MY_SECRET_KEY&outFormat=json&routeType=fastest&to=London,%20UK
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 19 Sep 2023 05:07:35 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '278'
+      Connection:
+      - keep-alive
+      X-Ratelimit-Limit-2628000:
+      - '15000'
+      X-Ratelimit-Remaining-2628000:
+      - '14809'
+      Ratelimit-Limit:
+      - '15000'
+      Ratelimit-Remaining:
+      - '14809'
+      Ratelimit-Reset:
+      - '2587945'
+      X-Powered-By:
+      - MapQuest
+      X-Request-Id:
+      - 720f52e0-56aa-11ee-abe1-fde527625859
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Transaction-Count:
+      - all=3,geocoding=2,directions=1
+      Etag:
+      - W/"116-iBjgnQxNGqjY6sVCYaem2XJ/c3Q"
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJyb3V0ZSI6eyJyb3V0ZUVycm9yIjp7ImVycm9yQ29kZSI6MiwibWVzc2FnZSI6IiJ9fSwiaW5mbyI6eyJzdGF0dXNjb2RlIjo0MDIsImNvcHlyaWdodCI6eyJ0ZXh0IjoiwqkgMjAyMyBNYXBRdWVzdCwgSW5jLiIsImltYWdlVXJsIjoiaHR0cDovL2FwaS5tcWNkbi5jb20vcmVzL21xbG9nby5naWYiLCJpbWFnZUFsdFRleHQiOiLCqSAyMDIzIE1hcFF1ZXN0LCBJbmMuIn0sIm1lc3NhZ2VzIjpbIldlIGFyZSB1bmFibGUgdG8gcm91dGUgd2l0aCB0aGUgZ2l2ZW4gbG9jYXRpb25zLiJdfX0=
+  recorded_at: Tue, 19 Sep 2023 05:07:35 GMT
+- request:
+    method: get
+    uri: https://www.mapquestapi.com/directions/v2/route?ambiguities=ignore&avoidTimedConditions=false&doReverseGeocode=false&enhancedNarrative=false&from=New%20York,NY&key=DONT_SHARE_MY_SECRET_KEY&outFormat=json&routeType=fastest&to=London,%20UK
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 19 Sep 2023 05:09:51 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '278'
+      Connection:
+      - keep-alive
+      X-Ratelimit-Limit-2628000:
+      - '15000'
+      X-Ratelimit-Remaining-2628000:
+      - '14785'
+      Ratelimit-Limit:
+      - '15000'
+      Ratelimit-Remaining:
+      - '14785'
+      Ratelimit-Reset:
+      - '2587809'
+      X-Powered-By:
+      - MapQuest
+      X-Request-Id:
+      - c3643f20-56aa-11ee-acc1-0754655dfa75
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Transaction-Count:
+      - all=3,geocoding=2,directions=1
+      Etag:
+      - W/"116-iBjgnQxNGqjY6sVCYaem2XJ/c3Q"
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJyb3V0ZSI6eyJyb3V0ZUVycm9yIjp7ImVycm9yQ29kZSI6MiwibWVzc2FnZSI6IiJ9fSwiaW5mbyI6eyJzdGF0dXNjb2RlIjo0MDIsImNvcHlyaWdodCI6eyJ0ZXh0IjoiwqkgMjAyMyBNYXBRdWVzdCwgSW5jLiIsImltYWdlVXJsIjoiaHR0cDovL2FwaS5tcWNkbi5jb20vcmVzL21xbG9nby5naWYiLCJpbWFnZUFsdFRleHQiOiLCqSAyMDIzIE1hcFF1ZXN0LCBJbmMuIn0sIm1lc3NhZ2VzIjpbIldlIGFyZSB1bmFibGUgdG8gcm91dGUgd2l0aCB0aGUgZ2l2ZW4gbG9jYXRpb25zLiJdfX0=
+  recorded_at: Tue, 19 Sep 2023 05:09:51 GMT
+- request:
+    method: get
+    uri: https://www.mapquestapi.com/directions/v2/route?ambiguities=ignore&avoidTimedConditions=false&doReverseGeocode=false&enhancedNarrative=false&from=New%20York,NY&key=DONT_SHARE_MY_SECRET_KEY&outFormat=json&routeType=fastest&to=London,%20UK
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 19 Sep 2023 05:10:11 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '278'
+      Connection:
+      - keep-alive
+      X-Ratelimit-Limit-2628000:
+      - '15000'
+      X-Ratelimit-Remaining-2628000:
+      - '14759'
+      Ratelimit-Limit:
+      - '15000'
+      Ratelimit-Remaining:
+      - '14759'
+      Ratelimit-Reset:
+      - '2587789'
+      X-Powered-By:
+      - MapQuest
+      X-Request-Id:
+      - cf1282f0-56aa-11ee-acc1-0754655dfa75
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Transaction-Count:
+      - all=3,geocoding=2,directions=1
+      Etag:
+      - W/"116-iBjgnQxNGqjY6sVCYaem2XJ/c3Q"
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJyb3V0ZSI6eyJyb3V0ZUVycm9yIjp7ImVycm9yQ29kZSI6MiwibWVzc2FnZSI6IiJ9fSwiaW5mbyI6eyJzdGF0dXNjb2RlIjo0MDIsImNvcHlyaWdodCI6eyJ0ZXh0IjoiwqkgMjAyMyBNYXBRdWVzdCwgSW5jLiIsImltYWdlVXJsIjoiaHR0cDovL2FwaS5tcWNkbi5jb20vcmVzL21xbG9nby5naWYiLCJpbWFnZUFsdFRleHQiOiLCqSAyMDIzIE1hcFF1ZXN0LCBJbmMuIn0sIm1lc3NhZ2VzIjpbIldlIGFyZSB1bmFibGUgdG8gcm91dGUgd2l0aCB0aGUgZ2l2ZW4gbG9jYXRpb25zLiJdfX0=
+  recorded_at: Tue, 19 Sep 2023 05:10:11 GMT
+- request:
+    method: get
+    uri: https://www.mapquestapi.com/directions/v2/route?ambiguities=ignore&avoidTimedConditions=false&doReverseGeocode=false&enhancedNarrative=false&from=New%20York,NY&key=DONT_SHARE_MY_SECRET_KEY&outFormat=json&routeType=fastest&to=London,%20UK
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 19 Sep 2023 05:10:35 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '278'
+      Connection:
+      - keep-alive
+      X-Ratelimit-Limit-2628000:
+      - '15000'
+      X-Ratelimit-Remaining-2628000:
+      - '14732'
+      Ratelimit-Limit:
+      - '15000'
+      Ratelimit-Remaining:
+      - '14732'
+      Ratelimit-Reset:
+      - '2587765'
+      X-Powered-By:
+      - MapQuest
+      X-Request-Id:
+      - dd3d8690-56aa-11ee-93f1-034b5dfb1fdb
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Transaction-Count:
+      - all=3,geocoding=2,directions=1
+      Etag:
+      - W/"116-iBjgnQxNGqjY6sVCYaem2XJ/c3Q"
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJyb3V0ZSI6eyJyb3V0ZUVycm9yIjp7ImVycm9yQ29kZSI6MiwibWVzc2FnZSI6IiJ9fSwiaW5mbyI6eyJzdGF0dXNjb2RlIjo0MDIsImNvcHlyaWdodCI6eyJ0ZXh0IjoiwqkgMjAyMyBNYXBRdWVzdCwgSW5jLiIsImltYWdlVXJsIjoiaHR0cDovL2FwaS5tcWNkbi5jb20vcmVzL21xbG9nby5naWYiLCJpbWFnZUFsdFRleHQiOiLCqSAyMDIzIE1hcFF1ZXN0LCBJbmMuIn0sIm1lc3NhZ2VzIjpbIldlIGFyZSB1bmFibGUgdG8gcm91dGUgd2l0aCB0aGUgZ2l2ZW4gbG9jYXRpb25zLiJdfX0=
+  recorded_at: Tue, 19 Sep 2023 05:10:35 GMT
+- request:
+    method: get
+    uri: https://www.mapquestapi.com/directions/v2/route?ambiguities=ignore&avoidTimedConditions=false&doReverseGeocode=false&enhancedNarrative=false&from=New%20York,NY&key=DONT_SHARE_MY_SECRET_KEY&outFormat=json&routeType=fastest&to=London,%20UK
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 19 Sep 2023 05:11:56 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '278'
+      Connection:
+      - keep-alive
+      X-Ratelimit-Limit-2628000:
+      - '15000'
+      X-Ratelimit-Remaining-2628000:
+      - '14706'
+      Ratelimit-Limit:
+      - '15000'
+      Ratelimit-Remaining:
+      - '14706'
+      Ratelimit-Reset:
+      - '2587684'
+      X-Powered-By:
+      - MapQuest
+      X-Request-Id:
+      - 0df68480-56ab-11ee-acc1-0754655dfa75
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Transaction-Count:
+      - all=3,geocoding=2,directions=1
+      Etag:
+      - W/"116-iBjgnQxNGqjY6sVCYaem2XJ/c3Q"
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJyb3V0ZSI6eyJyb3V0ZUVycm9yIjp7ImVycm9yQ29kZSI6MiwibWVzc2FnZSI6IiJ9fSwiaW5mbyI6eyJzdGF0dXNjb2RlIjo0MDIsImNvcHlyaWdodCI6eyJ0ZXh0IjoiwqkgMjAyMyBNYXBRdWVzdCwgSW5jLiIsImltYWdlVXJsIjoiaHR0cDovL2FwaS5tcWNkbi5jb20vcmVzL21xbG9nby5naWYiLCJpbWFnZUFsdFRleHQiOiLCqSAyMDIzIE1hcFF1ZXN0LCBJbmMuIn0sIm1lc3NhZ2VzIjpbIldlIGFyZSB1bmFibGUgdG8gcm91dGUgd2l0aCB0aGUgZ2l2ZW4gbG9jYXRpb25zLiJdfX0=
+  recorded_at: Tue, 19 Sep 2023 05:11:56 GMT
+- request:
+    method: get
+    uri: https://www.mapquestapi.com/directions/v2/route?ambiguities=ignore&avoidTimedConditions=false&doReverseGeocode=false&enhancedNarrative=false&from=New%20York,NY&key=DONT_SHARE_MY_SECRET_KEY&outFormat=json&routeType=fastest&to=London,%20UK
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 19 Sep 2023 05:12:09 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '278'
+      Connection:
+      - keep-alive
+      X-Ratelimit-Limit-2628000:
+      - '15000'
+      X-Ratelimit-Remaining-2628000:
+      - '14686'
+      Ratelimit-Limit:
+      - '15000'
+      Ratelimit-Remaining:
+      - '14686'
+      Ratelimit-Reset:
+      - '2587671'
+      X-Powered-By:
+      - MapQuest
+      X-Request-Id:
+      - 158b9690-56ab-11ee-abe1-fde527625859
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Transaction-Count:
+      - all=3,geocoding=2,directions=1
+      Etag:
+      - W/"116-iBjgnQxNGqjY6sVCYaem2XJ/c3Q"
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJyb3V0ZSI6eyJyb3V0ZUVycm9yIjp7ImVycm9yQ29kZSI6MiwibWVzc2FnZSI6IiJ9fSwiaW5mbyI6eyJzdGF0dXNjb2RlIjo0MDIsImNvcHlyaWdodCI6eyJ0ZXh0IjoiwqkgMjAyMyBNYXBRdWVzdCwgSW5jLiIsImltYWdlVXJsIjoiaHR0cDovL2FwaS5tcWNkbi5jb20vcmVzL21xbG9nby5naWYiLCJpbWFnZUFsdFRleHQiOiLCqSAyMDIzIE1hcFF1ZXN0LCBJbmMuIn0sIm1lc3NhZ2VzIjpbIldlIGFyZSB1bmFibGUgdG8gcm91dGUgd2l0aCB0aGUgZ2l2ZW4gbG9jYXRpb25zLiJdfX0=
+  recorded_at: Tue, 19 Sep 2023 05:12:09 GMT
+- request:
+    method: get
+    uri: https://www.mapquestapi.com/directions/v2/route?ambiguities=ignore&avoidTimedConditions=false&doReverseGeocode=false&enhancedNarrative=false&from=New%20York,NY&key=DONT_SHARE_MY_SECRET_KEY&outFormat=json&routeType=fastest&to=London,%20UK
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 19 Sep 2023 05:12:22 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '278'
+      Connection:
+      - keep-alive
+      X-Ratelimit-Limit-2628000:
+      - '15000'
+      X-Ratelimit-Remaining-2628000:
+      - '14658'
+      Ratelimit-Limit:
+      - '15000'
+      Ratelimit-Remaining:
+      - '14658'
+      Ratelimit-Reset:
+      - '2587658'
+      X-Powered-By:
+      - MapQuest
+      X-Request-Id:
+      - 1d1b2a60-56ab-11ee-93f1-034b5dfb1fdb
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Transaction-Count:
+      - all=3,geocoding=2,directions=1
+      Etag:
+      - W/"116-iBjgnQxNGqjY6sVCYaem2XJ/c3Q"
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJyb3V0ZSI6eyJyb3V0ZUVycm9yIjp7ImVycm9yQ29kZSI6MiwibWVzc2FnZSI6IiJ9fSwiaW5mbyI6eyJzdGF0dXNjb2RlIjo0MDIsImNvcHlyaWdodCI6eyJ0ZXh0IjoiwqkgMjAyMyBNYXBRdWVzdCwgSW5jLiIsImltYWdlVXJsIjoiaHR0cDovL2FwaS5tcWNkbi5jb20vcmVzL21xbG9nby5naWYiLCJpbWFnZUFsdFRleHQiOiLCqSAyMDIzIE1hcFF1ZXN0LCBJbmMuIn0sIm1lc3NhZ2VzIjpbIldlIGFyZSB1bmFibGUgdG8gcm91dGUgd2l0aCB0aGUgZ2l2ZW4gbG9jYXRpb25zLiJdfX0=
+  recorded_at: Tue, 19 Sep 2023 05:12:22 GMT
+recorded_with: VCR 6.2.0

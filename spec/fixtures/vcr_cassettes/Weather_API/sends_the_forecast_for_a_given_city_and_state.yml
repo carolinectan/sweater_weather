@@ -153,4 +153,821 @@ http_interactions:
         sky","icon":"01d"}],"clouds":0,"pop":0,"uvi":6},{"dt":1633543200,"sunrise":1633525270,"sunset":1633566867,"moonrise":1633525560,"moonset":1633568580,"moon_phase":0,"temp":{"day":76.69,"min":62.56,"max":81.27,"night":73.72,"eve":79.25,"morn":62.56},"feels_like":{"day":74.82,"night":71.64,"eve":79.25,"morn":59.94},"pressure":1016,"humidity":16,"dew_point":27.72,"wind_speed":4.38,"wind_deg":205,"wind_gust":5.68,"weather":[{"id":802,"main":"Clouds","description":"scattered
         clouds","icon":"03d"}],"clouds":34,"pop":0,"uvi":6}]}'
   recorded_at: Wed, 29 Sep 2021 14:09:08 GMT
-recorded_with: VCR 6.0.0
+- request:
+    method: get
+    uri: https://www.mapquestapi.com/geocoding/v1/address?inFormat=kvp&key=DONT_SHARE_MY_SECRET_KEY&location=denver,co&outFormat=json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Date:
+      - Tue, 19 Sep 2023 04:37:32 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Content-Length:
+      - '50'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Powered-By:
+      - MapQuest
+    body:
+      encoding: UTF-8
+      string: The AppKey submitted with this request is invalid.
+  recorded_at: Tue, 19 Sep 2023 04:37:32 GMT
+- request:
+    method: get
+    uri: https://www.mapquestapi.com/geocoding/v1/address?inFormat=kvp&key=DONT_SHARE_MY_SECRET_KEY&location=denver,co&outFormat=json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 19 Sep 2023 04:58:20 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '797'
+      Connection:
+      - keep-alive
+      X-Ratelimit-Limit-2628000:
+      - '15000'
+      X-Ratelimit-Remaining-2628000:
+      - '14983'
+      Ratelimit-Limit:
+      - '15000'
+      Ratelimit-Remaining:
+      - '14983'
+      Ratelimit-Reset:
+      - '2588500'
+      X-Powered-By:
+      - MapQuest
+      X-Request-Id:
+      - 276498f0-56a9-11ee-9307-ebde759c9ebf
+      Access-Control-Allow-Origin:
+      - "*"
+      Etag:
+      - W/"31d-e6U4VUsIusqpoCnMOLAMG4TFeGE"
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpbmZvIjp7InN0YXR1c2NvZGUiOjAsImNvcHlyaWdodCI6eyJ0ZXh0IjoiwqkgMjAyMyBNYXBRdWVzdCwgSW5jLiIsImltYWdlVXJsIjoiaHR0cDovL2FwaS5tcWNkbi5jb20vcmVzL21xbG9nby5naWYiLCJpbWFnZUFsdFRleHQiOiLCqSAyMDIzIE1hcFF1ZXN0LCBJbmMuIn0sIm1lc3NhZ2VzIjpbXX0sIm9wdGlvbnMiOnsibWF4UmVzdWx0cyI6LTEsImlnbm9yZUxhdExuZ0lucHV0IjpmYWxzZX0sInJlc3VsdHMiOlt7InByb3ZpZGVkTG9jYXRpb24iOnsibG9jYXRpb24iOiJkZW52ZXIsY28ifSwibG9jYXRpb25zIjpbeyJzdHJlZXQiOiIiLCJhZG1pbkFyZWE2IjoiIiwiYWRtaW5BcmVhNlR5cGUiOiJOZWlnaGJvcmhvb2QiLCJhZG1pbkFyZWE1IjoiRGVudmVyIiwiYWRtaW5BcmVhNVR5cGUiOiJDaXR5IiwiYWRtaW5BcmVhNCI6IkRlbnZlciIsImFkbWluQXJlYTRUeXBlIjoiQ291bnR5IiwiYWRtaW5BcmVhMyI6IkNPIiwiYWRtaW5BcmVhM1R5cGUiOiJTdGF0ZSIsImFkbWluQXJlYTEiOiJVUyIsImFkbWluQXJlYTFUeXBlIjoiQ291bnRyeSIsInBvc3RhbENvZGUiOiIiLCJnZW9jb2RlUXVhbGl0eUNvZGUiOiJBNVhBWCIsImdlb2NvZGVRdWFsaXR5IjoiQ0lUWSIsImRyYWdQb2ludCI6ZmFsc2UsInNpZGVPZlN0cmVldCI6Ik4iLCJsaW5rSWQiOiIwIiwidW5rbm93bklucHV0IjoiIiwidHlwZSI6InMiLCJsYXRMbmciOnsibGF0IjozOS43NDAwMSwibG5nIjotMTA0Ljk5MjAyfSwiZGlzcGxheUxhdExuZyI6eyJsYXQiOjM5Ljc0MDAxLCJsbmciOi0xMDQuOTkyMDJ9LCJtYXBVcmwiOiIifV19XX0=
+  recorded_at: Tue, 19 Sep 2023 04:58:20 GMT
+- request:
+    method: get
+    uri: https://www.mapquestapi.com/geocoding/v1/address?inFormat=kvp&key=DONT_SHARE_MY_SECRET_KEY&location=denver,co&outFormat=json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 19 Sep 2023 05:02:18 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '797'
+      Connection:
+      - keep-alive
+      X-Ratelimit-Limit-2628000:
+      - '15000'
+      X-Ratelimit-Remaining-2628000:
+      - '14961'
+      Ratelimit-Limit:
+      - '15000'
+      Ratelimit-Remaining:
+      - '14961'
+      Ratelimit-Reset:
+      - '2588262'
+      X-Powered-By:
+      - MapQuest
+      X-Request-Id:
+      - b4fc7610-56a9-11ee-9307-ebde759c9ebf
+      Access-Control-Allow-Origin:
+      - "*"
+      Etag:
+      - W/"31d-e6U4VUsIusqpoCnMOLAMG4TFeGE"
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpbmZvIjp7InN0YXR1c2NvZGUiOjAsImNvcHlyaWdodCI6eyJ0ZXh0IjoiwqkgMjAyMyBNYXBRdWVzdCwgSW5jLiIsImltYWdlVXJsIjoiaHR0cDovL2FwaS5tcWNkbi5jb20vcmVzL21xbG9nby5naWYiLCJpbWFnZUFsdFRleHQiOiLCqSAyMDIzIE1hcFF1ZXN0LCBJbmMuIn0sIm1lc3NhZ2VzIjpbXX0sIm9wdGlvbnMiOnsibWF4UmVzdWx0cyI6LTEsImlnbm9yZUxhdExuZ0lucHV0IjpmYWxzZX0sInJlc3VsdHMiOlt7InByb3ZpZGVkTG9jYXRpb24iOnsibG9jYXRpb24iOiJkZW52ZXIsY28ifSwibG9jYXRpb25zIjpbeyJzdHJlZXQiOiIiLCJhZG1pbkFyZWE2IjoiIiwiYWRtaW5BcmVhNlR5cGUiOiJOZWlnaGJvcmhvb2QiLCJhZG1pbkFyZWE1IjoiRGVudmVyIiwiYWRtaW5BcmVhNVR5cGUiOiJDaXR5IiwiYWRtaW5BcmVhNCI6IkRlbnZlciIsImFkbWluQXJlYTRUeXBlIjoiQ291bnR5IiwiYWRtaW5BcmVhMyI6IkNPIiwiYWRtaW5BcmVhM1R5cGUiOiJTdGF0ZSIsImFkbWluQXJlYTEiOiJVUyIsImFkbWluQXJlYTFUeXBlIjoiQ291bnRyeSIsInBvc3RhbENvZGUiOiIiLCJnZW9jb2RlUXVhbGl0eUNvZGUiOiJBNVhBWCIsImdlb2NvZGVRdWFsaXR5IjoiQ0lUWSIsImRyYWdQb2ludCI6ZmFsc2UsInNpZGVPZlN0cmVldCI6Ik4iLCJsaW5rSWQiOiIwIiwidW5rbm93bklucHV0IjoiIiwidHlwZSI6InMiLCJsYXRMbmciOnsibGF0IjozOS43NDAwMSwibG5nIjotMTA0Ljk5MjAyfSwiZGlzcGxheUxhdExuZyI6eyJsYXQiOjM5Ljc0MDAxLCJsbmciOi0xMDQuOTkyMDJ9LCJtYXBVcmwiOiIifV19XX0=
+  recorded_at: Tue, 19 Sep 2023 05:02:18 GMT
+- request:
+    method: get
+    uri: https://www.mapquestapi.com/geocoding/v1/address?inFormat=kvp&key=DONT_SHARE_MY_SECRET_KEY&location=denver,co&outFormat=json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 19 Sep 2023 05:02:31 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '797'
+      Connection:
+      - keep-alive
+      X-Ratelimit-Limit-2628000:
+      - '15000'
+      X-Ratelimit-Remaining-2628000:
+      - '14934'
+      Ratelimit-Limit:
+      - '15000'
+      Ratelimit-Remaining:
+      - '14934'
+      Ratelimit-Reset:
+      - '2588250'
+      X-Powered-By:
+      - MapQuest
+      X-Request-Id:
+      - bccd0a80-56a9-11ee-9307-ebde759c9ebf
+      Access-Control-Allow-Origin:
+      - "*"
+      Etag:
+      - W/"31d-e6U4VUsIusqpoCnMOLAMG4TFeGE"
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpbmZvIjp7InN0YXR1c2NvZGUiOjAsImNvcHlyaWdodCI6eyJ0ZXh0IjoiwqkgMjAyMyBNYXBRdWVzdCwgSW5jLiIsImltYWdlVXJsIjoiaHR0cDovL2FwaS5tcWNkbi5jb20vcmVzL21xbG9nby5naWYiLCJpbWFnZUFsdFRleHQiOiLCqSAyMDIzIE1hcFF1ZXN0LCBJbmMuIn0sIm1lc3NhZ2VzIjpbXX0sIm9wdGlvbnMiOnsibWF4UmVzdWx0cyI6LTEsImlnbm9yZUxhdExuZ0lucHV0IjpmYWxzZX0sInJlc3VsdHMiOlt7InByb3ZpZGVkTG9jYXRpb24iOnsibG9jYXRpb24iOiJkZW52ZXIsY28ifSwibG9jYXRpb25zIjpbeyJzdHJlZXQiOiIiLCJhZG1pbkFyZWE2IjoiIiwiYWRtaW5BcmVhNlR5cGUiOiJOZWlnaGJvcmhvb2QiLCJhZG1pbkFyZWE1IjoiRGVudmVyIiwiYWRtaW5BcmVhNVR5cGUiOiJDaXR5IiwiYWRtaW5BcmVhNCI6IkRlbnZlciIsImFkbWluQXJlYTRUeXBlIjoiQ291bnR5IiwiYWRtaW5BcmVhMyI6IkNPIiwiYWRtaW5BcmVhM1R5cGUiOiJTdGF0ZSIsImFkbWluQXJlYTEiOiJVUyIsImFkbWluQXJlYTFUeXBlIjoiQ291bnRyeSIsInBvc3RhbENvZGUiOiIiLCJnZW9jb2RlUXVhbGl0eUNvZGUiOiJBNVhBWCIsImdlb2NvZGVRdWFsaXR5IjoiQ0lUWSIsImRyYWdQb2ludCI6ZmFsc2UsInNpZGVPZlN0cmVldCI6Ik4iLCJsaW5rSWQiOiIwIiwidW5rbm93bklucHV0IjoiIiwidHlwZSI6InMiLCJsYXRMbmciOnsibGF0IjozOS43NDAwMSwibG5nIjotMTA0Ljk5MjAyfSwiZGlzcGxheUxhdExuZyI6eyJsYXQiOjM5Ljc0MDAxLCJsbmciOi0xMDQuOTkyMDJ9LCJtYXBVcmwiOiIifV19XX0=
+  recorded_at: Tue, 19 Sep 2023 05:02:31 GMT
+- request:
+    method: get
+    uri: https://www.mapquestapi.com/geocoding/v1/address?inFormat=kvp&key=DONT_SHARE_MY_SECRET_KEY&location=denver,co&outFormat=json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 19 Sep 2023 05:04:36 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '797'
+      Connection:
+      - keep-alive
+      X-Ratelimit-Limit-2628000:
+      - '15000'
+      X-Ratelimit-Remaining-2628000:
+      - '14908'
+      Ratelimit-Limit:
+      - '15000'
+      Ratelimit-Remaining:
+      - '14908'
+      Ratelimit-Reset:
+      - '2588124'
+      X-Powered-By:
+      - MapQuest
+      X-Request-Id:
+      - '07587210-56aa-11ee-9307-ebde759c9ebf'
+      Access-Control-Allow-Origin:
+      - "*"
+      Etag:
+      - W/"31d-e6U4VUsIusqpoCnMOLAMG4TFeGE"
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpbmZvIjp7InN0YXR1c2NvZGUiOjAsImNvcHlyaWdodCI6eyJ0ZXh0IjoiwqkgMjAyMyBNYXBRdWVzdCwgSW5jLiIsImltYWdlVXJsIjoiaHR0cDovL2FwaS5tcWNkbi5jb20vcmVzL21xbG9nby5naWYiLCJpbWFnZUFsdFRleHQiOiLCqSAyMDIzIE1hcFF1ZXN0LCBJbmMuIn0sIm1lc3NhZ2VzIjpbXX0sIm9wdGlvbnMiOnsibWF4UmVzdWx0cyI6LTEsImlnbm9yZUxhdExuZ0lucHV0IjpmYWxzZX0sInJlc3VsdHMiOlt7InByb3ZpZGVkTG9jYXRpb24iOnsibG9jYXRpb24iOiJkZW52ZXIsY28ifSwibG9jYXRpb25zIjpbeyJzdHJlZXQiOiIiLCJhZG1pbkFyZWE2IjoiIiwiYWRtaW5BcmVhNlR5cGUiOiJOZWlnaGJvcmhvb2QiLCJhZG1pbkFyZWE1IjoiRGVudmVyIiwiYWRtaW5BcmVhNVR5cGUiOiJDaXR5IiwiYWRtaW5BcmVhNCI6IkRlbnZlciIsImFkbWluQXJlYTRUeXBlIjoiQ291bnR5IiwiYWRtaW5BcmVhMyI6IkNPIiwiYWRtaW5BcmVhM1R5cGUiOiJTdGF0ZSIsImFkbWluQXJlYTEiOiJVUyIsImFkbWluQXJlYTFUeXBlIjoiQ291bnRyeSIsInBvc3RhbENvZGUiOiIiLCJnZW9jb2RlUXVhbGl0eUNvZGUiOiJBNVhBWCIsImdlb2NvZGVRdWFsaXR5IjoiQ0lUWSIsImRyYWdQb2ludCI6ZmFsc2UsInNpZGVPZlN0cmVldCI6Ik4iLCJsaW5rSWQiOiIwIiwidW5rbm93bklucHV0IjoiIiwidHlwZSI6InMiLCJsYXRMbmciOnsibGF0IjozOS43NDAwMSwibG5nIjotMTA0Ljk5MjAyfSwiZGlzcGxheUxhdExuZyI6eyJsYXQiOjM5Ljc0MDAxLCJsbmciOi0xMDQuOTkyMDJ9LCJtYXBVcmwiOiIifV19XX0=
+  recorded_at: Tue, 19 Sep 2023 05:04:36 GMT
+- request:
+    method: get
+    uri: https://www.mapquestapi.com/geocoding/v1/address?inFormat=kvp&key=DONT_SHARE_MY_SECRET_KEY&location=denver,co&outFormat=json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 19 Sep 2023 05:05:33 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '797'
+      Connection:
+      - keep-alive
+      X-Ratelimit-Limit-2628000:
+      - '15000'
+      X-Ratelimit-Remaining-2628000:
+      - '14885'
+      Ratelimit-Limit:
+      - '15000'
+      Ratelimit-Remaining:
+      - '14885'
+      Ratelimit-Reset:
+      - '2588067'
+      X-Powered-By:
+      - MapQuest
+      X-Request-Id:
+      - 29a3e520-56aa-11ee-8aa6-45030aea65e6
+      Access-Control-Allow-Origin:
+      - "*"
+      Etag:
+      - W/"31d-e6U4VUsIusqpoCnMOLAMG4TFeGE"
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpbmZvIjp7InN0YXR1c2NvZGUiOjAsImNvcHlyaWdodCI6eyJ0ZXh0IjoiwqkgMjAyMyBNYXBRdWVzdCwgSW5jLiIsImltYWdlVXJsIjoiaHR0cDovL2FwaS5tcWNkbi5jb20vcmVzL21xbG9nby5naWYiLCJpbWFnZUFsdFRleHQiOiLCqSAyMDIzIE1hcFF1ZXN0LCBJbmMuIn0sIm1lc3NhZ2VzIjpbXX0sIm9wdGlvbnMiOnsibWF4UmVzdWx0cyI6LTEsImlnbm9yZUxhdExuZ0lucHV0IjpmYWxzZX0sInJlc3VsdHMiOlt7InByb3ZpZGVkTG9jYXRpb24iOnsibG9jYXRpb24iOiJkZW52ZXIsY28ifSwibG9jYXRpb25zIjpbeyJzdHJlZXQiOiIiLCJhZG1pbkFyZWE2IjoiIiwiYWRtaW5BcmVhNlR5cGUiOiJOZWlnaGJvcmhvb2QiLCJhZG1pbkFyZWE1IjoiRGVudmVyIiwiYWRtaW5BcmVhNVR5cGUiOiJDaXR5IiwiYWRtaW5BcmVhNCI6IkRlbnZlciIsImFkbWluQXJlYTRUeXBlIjoiQ291bnR5IiwiYWRtaW5BcmVhMyI6IkNPIiwiYWRtaW5BcmVhM1R5cGUiOiJTdGF0ZSIsImFkbWluQXJlYTEiOiJVUyIsImFkbWluQXJlYTFUeXBlIjoiQ291bnRyeSIsInBvc3RhbENvZGUiOiIiLCJnZW9jb2RlUXVhbGl0eUNvZGUiOiJBNVhBWCIsImdlb2NvZGVRdWFsaXR5IjoiQ0lUWSIsImRyYWdQb2ludCI6ZmFsc2UsInNpZGVPZlN0cmVldCI6Ik4iLCJsaW5rSWQiOiIwIiwidW5rbm93bklucHV0IjoiIiwidHlwZSI6InMiLCJsYXRMbmciOnsibGF0IjozOS43NDAwMSwibG5nIjotMTA0Ljk5MjAyfSwiZGlzcGxheUxhdExuZyI6eyJsYXQiOjM5Ljc0MDAxLCJsbmciOi0xMDQuOTkyMDJ9LCJtYXBVcmwiOiIifV19XX0=
+  recorded_at: Tue, 19 Sep 2023 05:05:33 GMT
+- request:
+    method: get
+    uri: https://www.mapquestapi.com/geocoding/v1/address?inFormat=kvp&key=DONT_SHARE_MY_SECRET_KEY&location=denver,co&outFormat=json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 19 Sep 2023 05:06:13 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '797'
+      Connection:
+      - keep-alive
+      X-Ratelimit-Limit-2628000:
+      - '15000'
+      X-Ratelimit-Remaining-2628000:
+      - '14858'
+      Ratelimit-Limit:
+      - '15000'
+      Ratelimit-Remaining:
+      - '14858'
+      Ratelimit-Reset:
+      - '2588027'
+      X-Powered-By:
+      - MapQuest
+      X-Request-Id:
+      - 4127cae0-56aa-11ee-8d1f-032bf141fe7f
+      Access-Control-Allow-Origin:
+      - "*"
+      Etag:
+      - W/"31d-e6U4VUsIusqpoCnMOLAMG4TFeGE"
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpbmZvIjp7InN0YXR1c2NvZGUiOjAsImNvcHlyaWdodCI6eyJ0ZXh0IjoiwqkgMjAyMyBNYXBRdWVzdCwgSW5jLiIsImltYWdlVXJsIjoiaHR0cDovL2FwaS5tcWNkbi5jb20vcmVzL21xbG9nby5naWYiLCJpbWFnZUFsdFRleHQiOiLCqSAyMDIzIE1hcFF1ZXN0LCBJbmMuIn0sIm1lc3NhZ2VzIjpbXX0sIm9wdGlvbnMiOnsibWF4UmVzdWx0cyI6LTEsImlnbm9yZUxhdExuZ0lucHV0IjpmYWxzZX0sInJlc3VsdHMiOlt7InByb3ZpZGVkTG9jYXRpb24iOnsibG9jYXRpb24iOiJkZW52ZXIsY28ifSwibG9jYXRpb25zIjpbeyJzdHJlZXQiOiIiLCJhZG1pbkFyZWE2IjoiIiwiYWRtaW5BcmVhNlR5cGUiOiJOZWlnaGJvcmhvb2QiLCJhZG1pbkFyZWE1IjoiRGVudmVyIiwiYWRtaW5BcmVhNVR5cGUiOiJDaXR5IiwiYWRtaW5BcmVhNCI6IkRlbnZlciIsImFkbWluQXJlYTRUeXBlIjoiQ291bnR5IiwiYWRtaW5BcmVhMyI6IkNPIiwiYWRtaW5BcmVhM1R5cGUiOiJTdGF0ZSIsImFkbWluQXJlYTEiOiJVUyIsImFkbWluQXJlYTFUeXBlIjoiQ291bnRyeSIsInBvc3RhbENvZGUiOiIiLCJnZW9jb2RlUXVhbGl0eUNvZGUiOiJBNVhBWCIsImdlb2NvZGVRdWFsaXR5IjoiQ0lUWSIsImRyYWdQb2ludCI6ZmFsc2UsInNpZGVPZlN0cmVldCI6Ik4iLCJsaW5rSWQiOiIwIiwidW5rbm93bklucHV0IjoiIiwidHlwZSI6InMiLCJsYXRMbmciOnsibGF0IjozOS43NDAwMSwibG5nIjotMTA0Ljk5MjAyfSwiZGlzcGxheUxhdExuZyI6eyJsYXQiOjM5Ljc0MDAxLCJsbmciOi0xMDQuOTkyMDJ9LCJtYXBVcmwiOiIifV19XX0=
+  recorded_at: Tue, 19 Sep 2023 05:06:13 GMT
+- request:
+    method: get
+    uri: https://www.mapquestapi.com/geocoding/v1/address?inFormat=kvp&key=DONT_SHARE_MY_SECRET_KEY&location=denver,co&outFormat=json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 19 Sep 2023 05:06:49 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '797'
+      Connection:
+      - keep-alive
+      X-Ratelimit-Limit-2628000:
+      - '15000'
+      X-Ratelimit-Remaining-2628000:
+      - '14837'
+      Ratelimit-Limit:
+      - '15000'
+      Ratelimit-Remaining:
+      - '14837'
+      Ratelimit-Reset:
+      - '2587991'
+      X-Powered-By:
+      - MapQuest
+      X-Request-Id:
+      - 56d60640-56aa-11ee-9307-ebde759c9ebf
+      Access-Control-Allow-Origin:
+      - "*"
+      Etag:
+      - W/"31d-e6U4VUsIusqpoCnMOLAMG4TFeGE"
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpbmZvIjp7InN0YXR1c2NvZGUiOjAsImNvcHlyaWdodCI6eyJ0ZXh0IjoiwqkgMjAyMyBNYXBRdWVzdCwgSW5jLiIsImltYWdlVXJsIjoiaHR0cDovL2FwaS5tcWNkbi5jb20vcmVzL21xbG9nby5naWYiLCJpbWFnZUFsdFRleHQiOiLCqSAyMDIzIE1hcFF1ZXN0LCBJbmMuIn0sIm1lc3NhZ2VzIjpbXX0sIm9wdGlvbnMiOnsibWF4UmVzdWx0cyI6LTEsImlnbm9yZUxhdExuZ0lucHV0IjpmYWxzZX0sInJlc3VsdHMiOlt7InByb3ZpZGVkTG9jYXRpb24iOnsibG9jYXRpb24iOiJkZW52ZXIsY28ifSwibG9jYXRpb25zIjpbeyJzdHJlZXQiOiIiLCJhZG1pbkFyZWE2IjoiIiwiYWRtaW5BcmVhNlR5cGUiOiJOZWlnaGJvcmhvb2QiLCJhZG1pbkFyZWE1IjoiRGVudmVyIiwiYWRtaW5BcmVhNVR5cGUiOiJDaXR5IiwiYWRtaW5BcmVhNCI6IkRlbnZlciIsImFkbWluQXJlYTRUeXBlIjoiQ291bnR5IiwiYWRtaW5BcmVhMyI6IkNPIiwiYWRtaW5BcmVhM1R5cGUiOiJTdGF0ZSIsImFkbWluQXJlYTEiOiJVUyIsImFkbWluQXJlYTFUeXBlIjoiQ291bnRyeSIsInBvc3RhbENvZGUiOiIiLCJnZW9jb2RlUXVhbGl0eUNvZGUiOiJBNVhBWCIsImdlb2NvZGVRdWFsaXR5IjoiQ0lUWSIsImRyYWdQb2ludCI6ZmFsc2UsInNpZGVPZlN0cmVldCI6Ik4iLCJsaW5rSWQiOiIwIiwidW5rbm93bklucHV0IjoiIiwidHlwZSI6InMiLCJsYXRMbmciOnsibGF0IjozOS43NDAwMSwibG5nIjotMTA0Ljk5MjAyfSwiZGlzcGxheUxhdExuZyI6eyJsYXQiOjM5Ljc0MDAxLCJsbmciOi0xMDQuOTkyMDJ9LCJtYXBVcmwiOiIifV19XX0=
+  recorded_at: Tue, 19 Sep 2023 05:06:49 GMT
+- request:
+    method: get
+    uri: https://www.mapquestapi.com/geocoding/v1/address?inFormat=kvp&key=DONT_SHARE_MY_SECRET_KEY&location=denver,co&outFormat=json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 19 Sep 2023 05:07:35 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '797'
+      Connection:
+      - keep-alive
+      X-Ratelimit-Limit-2628000:
+      - '15000'
+      X-Ratelimit-Remaining-2628000:
+      - '14811'
+      Ratelimit-Limit:
+      - '15000'
+      Ratelimit-Remaining:
+      - '14811'
+      Ratelimit-Reset:
+      - '2587945'
+      X-Powered-By:
+      - MapQuest
+      X-Request-Id:
+      - 722af130-56aa-11ee-8aa6-45030aea65e6
+      Access-Control-Allow-Origin:
+      - "*"
+      Etag:
+      - W/"31d-e6U4VUsIusqpoCnMOLAMG4TFeGE"
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpbmZvIjp7InN0YXR1c2NvZGUiOjAsImNvcHlyaWdodCI6eyJ0ZXh0IjoiwqkgMjAyMyBNYXBRdWVzdCwgSW5jLiIsImltYWdlVXJsIjoiaHR0cDovL2FwaS5tcWNkbi5jb20vcmVzL21xbG9nby5naWYiLCJpbWFnZUFsdFRleHQiOiLCqSAyMDIzIE1hcFF1ZXN0LCBJbmMuIn0sIm1lc3NhZ2VzIjpbXX0sIm9wdGlvbnMiOnsibWF4UmVzdWx0cyI6LTEsImlnbm9yZUxhdExuZ0lucHV0IjpmYWxzZX0sInJlc3VsdHMiOlt7InByb3ZpZGVkTG9jYXRpb24iOnsibG9jYXRpb24iOiJkZW52ZXIsY28ifSwibG9jYXRpb25zIjpbeyJzdHJlZXQiOiIiLCJhZG1pbkFyZWE2IjoiIiwiYWRtaW5BcmVhNlR5cGUiOiJOZWlnaGJvcmhvb2QiLCJhZG1pbkFyZWE1IjoiRGVudmVyIiwiYWRtaW5BcmVhNVR5cGUiOiJDaXR5IiwiYWRtaW5BcmVhNCI6IkRlbnZlciIsImFkbWluQXJlYTRUeXBlIjoiQ291bnR5IiwiYWRtaW5BcmVhMyI6IkNPIiwiYWRtaW5BcmVhM1R5cGUiOiJTdGF0ZSIsImFkbWluQXJlYTEiOiJVUyIsImFkbWluQXJlYTFUeXBlIjoiQ291bnRyeSIsInBvc3RhbENvZGUiOiIiLCJnZW9jb2RlUXVhbGl0eUNvZGUiOiJBNVhBWCIsImdlb2NvZGVRdWFsaXR5IjoiQ0lUWSIsImRyYWdQb2ludCI6ZmFsc2UsInNpZGVPZlN0cmVldCI6Ik4iLCJsaW5rSWQiOiIwIiwidW5rbm93bklucHV0IjoiIiwidHlwZSI6InMiLCJsYXRMbmciOnsibGF0IjozOS43NDAwMSwibG5nIjotMTA0Ljk5MjAyfSwiZGlzcGxheUxhdExuZyI6eyJsYXQiOjM5Ljc0MDAxLCJsbmciOi0xMDQuOTkyMDJ9LCJtYXBVcmwiOiIifV19XX0=
+  recorded_at: Tue, 19 Sep 2023 05:07:35 GMT
+- request:
+    method: get
+    uri: https://www.mapquestapi.com/geocoding/v1/address?inFormat=kvp&key=DONT_SHARE_MY_SECRET_KEY&location=denver,co&outFormat=json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 19 Sep 2023 05:09:51 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '797'
+      Connection:
+      - keep-alive
+      X-Ratelimit-Limit-2628000:
+      - '15000'
+      X-Ratelimit-Remaining-2628000:
+      - '14784'
+      Ratelimit-Limit:
+      - '15000'
+      Ratelimit-Remaining:
+      - '14784'
+      Ratelimit-Reset:
+      - '2587809'
+      X-Powered-By:
+      - MapQuest
+      X-Request-Id:
+      - c38338d0-56aa-11ee-8d1f-032bf141fe7f
+      Access-Control-Allow-Origin:
+      - "*"
+      Etag:
+      - W/"31d-e6U4VUsIusqpoCnMOLAMG4TFeGE"
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpbmZvIjp7InN0YXR1c2NvZGUiOjAsImNvcHlyaWdodCI6eyJ0ZXh0IjoiwqkgMjAyMyBNYXBRdWVzdCwgSW5jLiIsImltYWdlVXJsIjoiaHR0cDovL2FwaS5tcWNkbi5jb20vcmVzL21xbG9nby5naWYiLCJpbWFnZUFsdFRleHQiOiLCqSAyMDIzIE1hcFF1ZXN0LCBJbmMuIn0sIm1lc3NhZ2VzIjpbXX0sIm9wdGlvbnMiOnsibWF4UmVzdWx0cyI6LTEsImlnbm9yZUxhdExuZ0lucHV0IjpmYWxzZX0sInJlc3VsdHMiOlt7InByb3ZpZGVkTG9jYXRpb24iOnsibG9jYXRpb24iOiJkZW52ZXIsY28ifSwibG9jYXRpb25zIjpbeyJzdHJlZXQiOiIiLCJhZG1pbkFyZWE2IjoiIiwiYWRtaW5BcmVhNlR5cGUiOiJOZWlnaGJvcmhvb2QiLCJhZG1pbkFyZWE1IjoiRGVudmVyIiwiYWRtaW5BcmVhNVR5cGUiOiJDaXR5IiwiYWRtaW5BcmVhNCI6IkRlbnZlciIsImFkbWluQXJlYTRUeXBlIjoiQ291bnR5IiwiYWRtaW5BcmVhMyI6IkNPIiwiYWRtaW5BcmVhM1R5cGUiOiJTdGF0ZSIsImFkbWluQXJlYTEiOiJVUyIsImFkbWluQXJlYTFUeXBlIjoiQ291bnRyeSIsInBvc3RhbENvZGUiOiIiLCJnZW9jb2RlUXVhbGl0eUNvZGUiOiJBNVhBWCIsImdlb2NvZGVRdWFsaXR5IjoiQ0lUWSIsImRyYWdQb2ludCI6ZmFsc2UsInNpZGVPZlN0cmVldCI6Ik4iLCJsaW5rSWQiOiIwIiwidW5rbm93bklucHV0IjoiIiwidHlwZSI6InMiLCJsYXRMbmciOnsibGF0IjozOS43NDAwMSwibG5nIjotMTA0Ljk5MjAyfSwiZGlzcGxheUxhdExuZyI6eyJsYXQiOjM5Ljc0MDAxLCJsbmciOi0xMDQuOTkyMDJ9LCJtYXBVcmwiOiIifV19XX0=
+  recorded_at: Tue, 19 Sep 2023 05:09:51 GMT
+- request:
+    method: get
+    uri: https://www.mapquestapi.com/geocoding/v1/address?inFormat=kvp&key=DONT_SHARE_MY_SECRET_KEY&location=denver,co&outFormat=json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 19 Sep 2023 05:10:11 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '797'
+      Connection:
+      - keep-alive
+      X-Ratelimit-Limit-2628000:
+      - '15000'
+      X-Ratelimit-Remaining-2628000:
+      - '14759'
+      Ratelimit-Limit:
+      - '15000'
+      Ratelimit-Remaining:
+      - '14759'
+      Ratelimit-Reset:
+      - '2587789'
+      X-Powered-By:
+      - MapQuest
+      X-Request-Id:
+      - cf3c03f0-56aa-11ee-9307-ebde759c9ebf
+      Access-Control-Allow-Origin:
+      - "*"
+      Etag:
+      - W/"31d-e6U4VUsIusqpoCnMOLAMG4TFeGE"
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpbmZvIjp7InN0YXR1c2NvZGUiOjAsImNvcHlyaWdodCI6eyJ0ZXh0IjoiwqkgMjAyMyBNYXBRdWVzdCwgSW5jLiIsImltYWdlVXJsIjoiaHR0cDovL2FwaS5tcWNkbi5jb20vcmVzL21xbG9nby5naWYiLCJpbWFnZUFsdFRleHQiOiLCqSAyMDIzIE1hcFF1ZXN0LCBJbmMuIn0sIm1lc3NhZ2VzIjpbXX0sIm9wdGlvbnMiOnsibWF4UmVzdWx0cyI6LTEsImlnbm9yZUxhdExuZ0lucHV0IjpmYWxzZX0sInJlc3VsdHMiOlt7InByb3ZpZGVkTG9jYXRpb24iOnsibG9jYXRpb24iOiJkZW52ZXIsY28ifSwibG9jYXRpb25zIjpbeyJzdHJlZXQiOiIiLCJhZG1pbkFyZWE2IjoiIiwiYWRtaW5BcmVhNlR5cGUiOiJOZWlnaGJvcmhvb2QiLCJhZG1pbkFyZWE1IjoiRGVudmVyIiwiYWRtaW5BcmVhNVR5cGUiOiJDaXR5IiwiYWRtaW5BcmVhNCI6IkRlbnZlciIsImFkbWluQXJlYTRUeXBlIjoiQ291bnR5IiwiYWRtaW5BcmVhMyI6IkNPIiwiYWRtaW5BcmVhM1R5cGUiOiJTdGF0ZSIsImFkbWluQXJlYTEiOiJVUyIsImFkbWluQXJlYTFUeXBlIjoiQ291bnRyeSIsInBvc3RhbENvZGUiOiIiLCJnZW9jb2RlUXVhbGl0eUNvZGUiOiJBNVhBWCIsImdlb2NvZGVRdWFsaXR5IjoiQ0lUWSIsImRyYWdQb2ludCI6ZmFsc2UsInNpZGVPZlN0cmVldCI6Ik4iLCJsaW5rSWQiOiIwIiwidW5rbm93bklucHV0IjoiIiwidHlwZSI6InMiLCJsYXRMbmciOnsibGF0IjozOS43NDAwMSwibG5nIjotMTA0Ljk5MjAyfSwiZGlzcGxheUxhdExuZyI6eyJsYXQiOjM5Ljc0MDAxLCJsbmciOi0xMDQuOTkyMDJ9LCJtYXBVcmwiOiIifV19XX0=
+  recorded_at: Tue, 19 Sep 2023 05:10:11 GMT
+- request:
+    method: get
+    uri: https://www.mapquestapi.com/geocoding/v1/address?inFormat=kvp&key=DONT_SHARE_MY_SECRET_KEY&location=denver,co&outFormat=json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 19 Sep 2023 05:10:35 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '797'
+      Connection:
+      - keep-alive
+      X-Ratelimit-Limit-2628000:
+      - '15000'
+      X-Ratelimit-Remaining-2628000:
+      - '14735'
+      Ratelimit-Limit:
+      - '15000'
+      Ratelimit-Remaining:
+      - '14735'
+      Ratelimit-Reset:
+      - '2587765'
+      X-Powered-By:
+      - MapQuest
+      X-Request-Id:
+      - dd5cce60-56aa-11ee-8d1f-032bf141fe7f
+      Access-Control-Allow-Origin:
+      - "*"
+      Etag:
+      - W/"31d-e6U4VUsIusqpoCnMOLAMG4TFeGE"
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpbmZvIjp7InN0YXR1c2NvZGUiOjAsImNvcHlyaWdodCI6eyJ0ZXh0IjoiwqkgMjAyMyBNYXBRdWVzdCwgSW5jLiIsImltYWdlVXJsIjoiaHR0cDovL2FwaS5tcWNkbi5jb20vcmVzL21xbG9nby5naWYiLCJpbWFnZUFsdFRleHQiOiLCqSAyMDIzIE1hcFF1ZXN0LCBJbmMuIn0sIm1lc3NhZ2VzIjpbXX0sIm9wdGlvbnMiOnsibWF4UmVzdWx0cyI6LTEsImlnbm9yZUxhdExuZ0lucHV0IjpmYWxzZX0sInJlc3VsdHMiOlt7InByb3ZpZGVkTG9jYXRpb24iOnsibG9jYXRpb24iOiJkZW52ZXIsY28ifSwibG9jYXRpb25zIjpbeyJzdHJlZXQiOiIiLCJhZG1pbkFyZWE2IjoiIiwiYWRtaW5BcmVhNlR5cGUiOiJOZWlnaGJvcmhvb2QiLCJhZG1pbkFyZWE1IjoiRGVudmVyIiwiYWRtaW5BcmVhNVR5cGUiOiJDaXR5IiwiYWRtaW5BcmVhNCI6IkRlbnZlciIsImFkbWluQXJlYTRUeXBlIjoiQ291bnR5IiwiYWRtaW5BcmVhMyI6IkNPIiwiYWRtaW5BcmVhM1R5cGUiOiJTdGF0ZSIsImFkbWluQXJlYTEiOiJVUyIsImFkbWluQXJlYTFUeXBlIjoiQ291bnRyeSIsInBvc3RhbENvZGUiOiIiLCJnZW9jb2RlUXVhbGl0eUNvZGUiOiJBNVhBWCIsImdlb2NvZGVRdWFsaXR5IjoiQ0lUWSIsImRyYWdQb2ludCI6ZmFsc2UsInNpZGVPZlN0cmVldCI6Ik4iLCJsaW5rSWQiOiIwIiwidW5rbm93bklucHV0IjoiIiwidHlwZSI6InMiLCJsYXRMbmciOnsibGF0IjozOS43NDAwMSwibG5nIjotMTA0Ljk5MjAyfSwiZGlzcGxheUxhdExuZyI6eyJsYXQiOjM5Ljc0MDAxLCJsbmciOi0xMDQuOTkyMDJ9LCJtYXBVcmwiOiIifV19XX0=
+  recorded_at: Tue, 19 Sep 2023 05:10:35 GMT
+- request:
+    method: get
+    uri: https://www.mapquestapi.com/geocoding/v1/address?inFormat=kvp&key=DONT_SHARE_MY_SECRET_KEY&location=denver,co&outFormat=json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 19 Sep 2023 05:11:57 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '797'
+      Connection:
+      - keep-alive
+      X-Ratelimit-Limit-2628000:
+      - '15000'
+      X-Ratelimit-Remaining-2628000:
+      - '14708'
+      Ratelimit-Limit:
+      - '15000'
+      Ratelimit-Remaining:
+      - '14708'
+      Ratelimit-Reset:
+      - '2587683'
+      X-Powered-By:
+      - MapQuest
+      X-Request-Id:
+      - 0e18d990-56ab-11ee-8d1f-032bf141fe7f
+      Access-Control-Allow-Origin:
+      - "*"
+      Etag:
+      - W/"31d-e6U4VUsIusqpoCnMOLAMG4TFeGE"
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpbmZvIjp7InN0YXR1c2NvZGUiOjAsImNvcHlyaWdodCI6eyJ0ZXh0IjoiwqkgMjAyMyBNYXBRdWVzdCwgSW5jLiIsImltYWdlVXJsIjoiaHR0cDovL2FwaS5tcWNkbi5jb20vcmVzL21xbG9nby5naWYiLCJpbWFnZUFsdFRleHQiOiLCqSAyMDIzIE1hcFF1ZXN0LCBJbmMuIn0sIm1lc3NhZ2VzIjpbXX0sIm9wdGlvbnMiOnsibWF4UmVzdWx0cyI6LTEsImlnbm9yZUxhdExuZ0lucHV0IjpmYWxzZX0sInJlc3VsdHMiOlt7InByb3ZpZGVkTG9jYXRpb24iOnsibG9jYXRpb24iOiJkZW52ZXIsY28ifSwibG9jYXRpb25zIjpbeyJzdHJlZXQiOiIiLCJhZG1pbkFyZWE2IjoiIiwiYWRtaW5BcmVhNlR5cGUiOiJOZWlnaGJvcmhvb2QiLCJhZG1pbkFyZWE1IjoiRGVudmVyIiwiYWRtaW5BcmVhNVR5cGUiOiJDaXR5IiwiYWRtaW5BcmVhNCI6IkRlbnZlciIsImFkbWluQXJlYTRUeXBlIjoiQ291bnR5IiwiYWRtaW5BcmVhMyI6IkNPIiwiYWRtaW5BcmVhM1R5cGUiOiJTdGF0ZSIsImFkbWluQXJlYTEiOiJVUyIsImFkbWluQXJlYTFUeXBlIjoiQ291bnRyeSIsInBvc3RhbENvZGUiOiIiLCJnZW9jb2RlUXVhbGl0eUNvZGUiOiJBNVhBWCIsImdlb2NvZGVRdWFsaXR5IjoiQ0lUWSIsImRyYWdQb2ludCI6ZmFsc2UsInNpZGVPZlN0cmVldCI6Ik4iLCJsaW5rSWQiOiIwIiwidW5rbm93bklucHV0IjoiIiwidHlwZSI6InMiLCJsYXRMbmciOnsibGF0IjozOS43NDAwMSwibG5nIjotMTA0Ljk5MjAyfSwiZGlzcGxheUxhdExuZyI6eyJsYXQiOjM5Ljc0MDAxLCJsbmciOi0xMDQuOTkyMDJ9LCJtYXBVcmwiOiIifV19XX0=
+  recorded_at: Tue, 19 Sep 2023 05:11:57 GMT
+- request:
+    method: get
+    uri: https://www.mapquestapi.com/geocoding/v1/address?inFormat=kvp&key=DONT_SHARE_MY_SECRET_KEY&location=denver,co&outFormat=json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 19 Sep 2023 05:12:09 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '797'
+      Connection:
+      - keep-alive
+      X-Ratelimit-Limit-2628000:
+      - '15000'
+      X-Ratelimit-Remaining-2628000:
+      - '14681'
+      Ratelimit-Limit:
+      - '15000'
+      Ratelimit-Remaining:
+      - '14681'
+      Ratelimit-Reset:
+      - '2587671'
+      X-Powered-By:
+      - MapQuest
+      X-Request-Id:
+      - 15a698a0-56ab-11ee-9307-ebde759c9ebf
+      Access-Control-Allow-Origin:
+      - "*"
+      Etag:
+      - W/"31d-e6U4VUsIusqpoCnMOLAMG4TFeGE"
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpbmZvIjp7InN0YXR1c2NvZGUiOjAsImNvcHlyaWdodCI6eyJ0ZXh0IjoiwqkgMjAyMyBNYXBRdWVzdCwgSW5jLiIsImltYWdlVXJsIjoiaHR0cDovL2FwaS5tcWNkbi5jb20vcmVzL21xbG9nby5naWYiLCJpbWFnZUFsdFRleHQiOiLCqSAyMDIzIE1hcFF1ZXN0LCBJbmMuIn0sIm1lc3NhZ2VzIjpbXX0sIm9wdGlvbnMiOnsibWF4UmVzdWx0cyI6LTEsImlnbm9yZUxhdExuZ0lucHV0IjpmYWxzZX0sInJlc3VsdHMiOlt7InByb3ZpZGVkTG9jYXRpb24iOnsibG9jYXRpb24iOiJkZW52ZXIsY28ifSwibG9jYXRpb25zIjpbeyJzdHJlZXQiOiIiLCJhZG1pbkFyZWE2IjoiIiwiYWRtaW5BcmVhNlR5cGUiOiJOZWlnaGJvcmhvb2QiLCJhZG1pbkFyZWE1IjoiRGVudmVyIiwiYWRtaW5BcmVhNVR5cGUiOiJDaXR5IiwiYWRtaW5BcmVhNCI6IkRlbnZlciIsImFkbWluQXJlYTRUeXBlIjoiQ291bnR5IiwiYWRtaW5BcmVhMyI6IkNPIiwiYWRtaW5BcmVhM1R5cGUiOiJTdGF0ZSIsImFkbWluQXJlYTEiOiJVUyIsImFkbWluQXJlYTFUeXBlIjoiQ291bnRyeSIsInBvc3RhbENvZGUiOiIiLCJnZW9jb2RlUXVhbGl0eUNvZGUiOiJBNVhBWCIsImdlb2NvZGVRdWFsaXR5IjoiQ0lUWSIsImRyYWdQb2ludCI6ZmFsc2UsInNpZGVPZlN0cmVldCI6Ik4iLCJsaW5rSWQiOiIwIiwidW5rbm93bklucHV0IjoiIiwidHlwZSI6InMiLCJsYXRMbmciOnsibGF0IjozOS43NDAwMSwibG5nIjotMTA0Ljk5MjAyfSwiZGlzcGxheUxhdExuZyI6eyJsYXQiOjM5Ljc0MDAxLCJsbmciOi0xMDQuOTkyMDJ9LCJtYXBVcmwiOiIifV19XX0=
+  recorded_at: Tue, 19 Sep 2023 05:12:09 GMT
+- request:
+    method: get
+    uri: https://www.mapquestapi.com/geocoding/v1/address?inFormat=kvp&key=DONT_SHARE_MY_SECRET_KEY&location=denver,co&outFormat=json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 19 Sep 2023 05:12:22 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '797'
+      Connection:
+      - keep-alive
+      X-Ratelimit-Limit-2628000:
+      - '15000'
+      X-Ratelimit-Remaining-2628000:
+      - '14657'
+      Ratelimit-Limit:
+      - '15000'
+      Ratelimit-Remaining:
+      - '14657'
+      Ratelimit-Reset:
+      - '2587658'
+      X-Powered-By:
+      - MapQuest
+      X-Request-Id:
+      - 1d3c9510-56ab-11ee-8d1f-032bf141fe7f
+      Access-Control-Allow-Origin:
+      - "*"
+      Etag:
+      - W/"31d-e6U4VUsIusqpoCnMOLAMG4TFeGE"
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpbmZvIjp7InN0YXR1c2NvZGUiOjAsImNvcHlyaWdodCI6eyJ0ZXh0IjoiwqkgMjAyMyBNYXBRdWVzdCwgSW5jLiIsImltYWdlVXJsIjoiaHR0cDovL2FwaS5tcWNkbi5jb20vcmVzL21xbG9nby5naWYiLCJpbWFnZUFsdFRleHQiOiLCqSAyMDIzIE1hcFF1ZXN0LCBJbmMuIn0sIm1lc3NhZ2VzIjpbXX0sIm9wdGlvbnMiOnsibWF4UmVzdWx0cyI6LTEsImlnbm9yZUxhdExuZ0lucHV0IjpmYWxzZX0sInJlc3VsdHMiOlt7InByb3ZpZGVkTG9jYXRpb24iOnsibG9jYXRpb24iOiJkZW52ZXIsY28ifSwibG9jYXRpb25zIjpbeyJzdHJlZXQiOiIiLCJhZG1pbkFyZWE2IjoiIiwiYWRtaW5BcmVhNlR5cGUiOiJOZWlnaGJvcmhvb2QiLCJhZG1pbkFyZWE1IjoiRGVudmVyIiwiYWRtaW5BcmVhNVR5cGUiOiJDaXR5IiwiYWRtaW5BcmVhNCI6IkRlbnZlciIsImFkbWluQXJlYTRUeXBlIjoiQ291bnR5IiwiYWRtaW5BcmVhMyI6IkNPIiwiYWRtaW5BcmVhM1R5cGUiOiJTdGF0ZSIsImFkbWluQXJlYTEiOiJVUyIsImFkbWluQXJlYTFUeXBlIjoiQ291bnRyeSIsInBvc3RhbENvZGUiOiIiLCJnZW9jb2RlUXVhbGl0eUNvZGUiOiJBNVhBWCIsImdlb2NvZGVRdWFsaXR5IjoiQ0lUWSIsImRyYWdQb2ludCI6ZmFsc2UsInNpZGVPZlN0cmVldCI6Ik4iLCJsaW5rSWQiOiIwIiwidW5rbm93bklucHV0IjoiIiwidHlwZSI6InMiLCJsYXRMbmciOnsibGF0IjozOS43NDAwMSwibG5nIjotMTA0Ljk5MjAyfSwiZGlzcGxheUxhdExuZyI6eyJsYXQiOjM5Ljc0MDAxLCJsbmciOi0xMDQuOTkyMDJ9LCJtYXBVcmwiOiIifV19XX0=
+  recorded_at: Tue, 19 Sep 2023 05:12:22 GMT
+- request:
+    method: get
+    uri: https://api.openweathermap.org/data/2.5/onecall?appid=DONT_SHARE_MY_SECRET_KEY&exclude=minutely&lat=39.74001&lon=-104.99202&units=imperial
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Tue, 19 Sep 2023 05:12:22 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '17707'
+      Connection:
+      - keep-alive
+      X-Cache-Key:
+      - "/data/2.5/onecall?exclude=minutely&lat=39.74&lon=-104.99&units=imperial"
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: '{"lat":39.74,"lon":-104.992,"timezone":"America/Denver","timezone_offset":-21600,"current":{"dt":1695100310,"sunrise":1695041021,"sunset":1695085489,"temp":63.43,"feels_like":61.63,"pressure":1009,"humidity":46,"dew_point":42.31,"uvi":0,"clouds":100,"visibility":10000,"wind_speed":1.01,"wind_deg":161,"wind_gust":4,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04n"}]},"hourly":[{"dt":1695099600,"temp":63.43,"feels_like":61.63,"pressure":1009,"humidity":46,"dew_point":42.31,"uvi":0,"clouds":100,"visibility":10000,"wind_speed":10.09,"wind_deg":194,"wind_gust":15.1,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04n"}],"pop":0.56},{"dt":1695103200,"temp":63.61,"feels_like":61.88,"pressure":1009,"humidity":47,"dew_point":43.03,"uvi":0,"clouds":100,"visibility":10000,"wind_speed":6.71,"wind_deg":198,"wind_gust":10.18,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04n"}],"pop":0.48},{"dt":1695106800,"temp":63.93,"feels_like":62.24,"pressure":1009,"humidity":47,"dew_point":43.34,"uvi":0,"clouds":79,"visibility":10000,"wind_speed":5.37,"wind_deg":230,"wind_gust":9.22,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04n"}],"pop":0},{"dt":1695110400,"temp":64.02,"feels_like":62.24,"pressure":1010,"humidity":45,"dew_point":42.28,"uvi":0,"clouds":65,"visibility":10000,"wind_speed":5.17,"wind_deg":209,"wind_gust":7.9,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04n"}],"pop":0},{"dt":1695114000,"temp":63.75,"feels_like":61.84,"pressure":1010,"humidity":43,"dew_point":40.86,"uvi":0,"clouds":50,"visibility":10000,"wind_speed":5.06,"wind_deg":224,"wind_gust":8.05,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03n"}],"pop":0},{"dt":1695117600,"temp":63.46,"feels_like":61.48,"pressure":1010,"humidity":42,"dew_point":39.72,"uvi":0,"clouds":39,"visibility":10000,"wind_speed":5.03,"wind_deg":217,"wind_gust":6.85,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03n"}],"pop":0},{"dt":1695121200,"temp":62.74,"feels_like":60.75,"pressure":1010,"humidity":43,"dew_point":39.27,"uvi":0,"clouds":46,"visibility":10000,"wind_speed":5.1,"wind_deg":226,"wind_gust":8.39,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03n"}],"pop":0},{"dt":1695124800,"temp":62.17,"feels_like":60.06,"pressure":1010,"humidity":42,"dew_point":38.5,"uvi":0,"clouds":41,"visibility":10000,"wind_speed":4.88,"wind_deg":216,"wind_gust":6.89,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03n"}],"pop":0},{"dt":1695128400,"temp":61.77,"feels_like":59.63,"pressure":1010,"humidity":42,"dew_point":37.74,"uvi":0,"clouds":17,"visibility":10000,"wind_speed":4.74,"wind_deg":217,"wind_gust":7.09,"weather":[{"id":801,"main":"Clouds","description":"few
+        clouds","icon":"02d"}],"pop":0},{"dt":1695132000,"temp":63.91,"feels_like":61.79,"pressure":1010,"humidity":38,"dew_point":37.27,"uvi":0.36,"clouds":21,"visibility":10000,"wind_speed":4.76,"wind_deg":209,"wind_gust":7.16,"weather":[{"id":801,"main":"Clouds","description":"few
+        clouds","icon":"02d"}],"pop":0},{"dt":1695135600,"temp":68.31,"feels_like":66.29,"pressure":1010,"humidity":31,"dew_point":36.34,"uvi":1.28,"clouds":21,"visibility":10000,"wind_speed":4.5,"wind_deg":220,"wind_gust":6.2,"weather":[{"id":801,"main":"Clouds","description":"few
+        clouds","icon":"02d"}],"pop":0},{"dt":1695139200,"temp":72.84,"feels_like":71.04,"pressure":1009,"humidity":26,"dew_point":35.71,"uvi":2.86,"clouds":20,"visibility":10000,"wind_speed":4.16,"wind_deg":282,"wind_gust":10.78,"weather":[{"id":801,"main":"Clouds","description":"few
+        clouds","icon":"02d"}],"pop":0},{"dt":1695142800,"temp":75.34,"feels_like":73.65,"pressure":1008,"humidity":23,"dew_point":34.43,"uvi":4.68,"clouds":36,"visibility":10000,"wind_speed":8.84,"wind_deg":349,"wind_gust":12.1,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03d"}],"pop":0},{"dt":1695146400,"temp":76.8,"feels_like":75.16,"pressure":1008,"humidity":21,"dew_point":34.14,"uvi":6.14,"clouds":46,"visibility":10000,"wind_speed":9.53,"wind_deg":11,"wind_gust":12.21,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03d"}],"pop":0},{"dt":1695150000,"temp":78.21,"feels_like":76.66,"pressure":1007,"humidity":20,"dew_point":33.66,"uvi":6.33,"clouds":100,"visibility":10000,"wind_speed":9.55,"wind_deg":42,"wind_gust":12.46,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}],"pop":0},{"dt":1695153600,"temp":79.23,"feels_like":79.23,"pressure":1006,"humidity":19,"dew_point":33.93,"uvi":5.81,"clouds":99,"visibility":10000,"wind_speed":10.4,"wind_deg":52,"wind_gust":12.55,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}],"pop":0},{"dt":1695157200,"temp":79.77,"feels_like":79.77,"pressure":1006,"humidity":19,"dew_point":33.87,"uvi":4.43,"clouds":99,"visibility":10000,"wind_speed":8.48,"wind_deg":70,"wind_gust":11.65,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}],"pop":0.04},{"dt":1695160800,"temp":78.75,"feels_like":78.75,"pressure":1006,"humidity":22,"dew_point":35.94,"uvi":1.81,"clouds":78,"visibility":10000,"wind_speed":8.5,"wind_deg":16,"wind_gust":8.43,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04d"}],"pop":0.15},{"dt":1695164400,"temp":70.23,"feels_like":68.65,"pressure":1009,"humidity":36,"dew_point":41.83,"uvi":0.82,"clouds":82,"visibility":10000,"wind_speed":17.69,"wind_deg":306,"wind_gust":23.4,"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10d"}],"pop":0.39,"rain":{"1h":0.18}},{"dt":1695168000,"temp":60.91,"feels_like":59.76,"pressure":1011,"humidity":65,"dew_point":48.49,"uvi":0.22,"clouds":85,"visibility":10000,"wind_speed":14.99,"wind_deg":215,"wind_gust":17.58,"weather":[{"id":501,"main":"Rain","description":"moderate
+        rain","icon":"10d"}],"pop":0.63,"rain":{"1h":2.21}},{"dt":1695171600,"temp":61.2,"feels_like":59.94,"pressure":1012,"humidity":62,"dew_point":47.52,"uvi":0,"clouds":100,"visibility":10000,"wind_speed":9.35,"wind_deg":211,"wind_gust":12.55,"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10d"}],"pop":0.64,"rain":{"1h":0.9}},{"dt":1695175200,"temp":61.54,"feels_like":60.17,"pressure":1012,"humidity":59,"dew_point":46.72,"uvi":0,"clouds":100,"visibility":10000,"wind_speed":8.3,"wind_deg":223,"wind_gust":11.83,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04n"}],"pop":0.56},{"dt":1695178800,"temp":62.22,"feels_like":60.82,"pressure":1012,"humidity":57,"dew_point":46.56,"uvi":0,"clouds":100,"visibility":10000,"wind_speed":7.07,"wind_deg":220,"wind_gust":11.23,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04n"}],"pop":0.52},{"dt":1695182400,"temp":63.34,"feels_like":62.01,"pressure":1011,"humidity":56,"dew_point":47.07,"uvi":0,"clouds":100,"visibility":10000,"wind_speed":6.08,"wind_deg":207,"wind_gust":8.77,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04n"}],"pop":0.44},{"dt":1695186000,"temp":62.73,"feels_like":61.43,"pressure":1011,"humidity":58,"dew_point":47.32,"uvi":0,"clouds":100,"visibility":10000,"wind_speed":6.04,"wind_deg":226,"wind_gust":10.92,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04n"}],"pop":0.4},{"dt":1695189600,"temp":62.4,"feels_like":60.98,"pressure":1011,"humidity":56,"dew_point":46.26,"uvi":0,"clouds":100,"visibility":10000,"wind_speed":5.7,"wind_deg":235,"wind_gust":9.98,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04n"}],"pop":0.32},{"dt":1695193200,"temp":62.13,"feels_like":60.64,"pressure":1010,"humidity":55,"dew_point":45.46,"uvi":0,"clouds":100,"visibility":10000,"wind_speed":5.35,"wind_deg":213,"wind_gust":8.68,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04n"}],"pop":0},{"dt":1695196800,"temp":61.38,"feels_like":59.76,"pressure":1010,"humidity":54,"dew_point":44.19,"uvi":0,"clouds":99,"visibility":10000,"wind_speed":5.39,"wind_deg":212,"wind_gust":9.35,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04n"}],"pop":0},{"dt":1695200400,"temp":60.62,"feels_like":58.82,"pressure":1010,"humidity":52,"dew_point":42.69,"uvi":0,"clouds":99,"visibility":10000,"wind_speed":5.17,"wind_deg":198,"wind_gust":8.23,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04n"}],"pop":0},{"dt":1695204000,"temp":60.06,"feels_like":58.17,"pressure":1010,"humidity":51,"dew_point":41.27,"uvi":0,"clouds":77,"visibility":10000,"wind_speed":4.97,"wind_deg":208,"wind_gust":7.81,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04n"}],"pop":0},{"dt":1695207600,"temp":59.59,"feels_like":57.56,"pressure":1010,"humidity":49,"dew_point":40.05,"uvi":0,"clouds":62,"visibility":10000,"wind_speed":4.63,"wind_deg":212,"wind_gust":6.78,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04n"}],"pop":0},{"dt":1695211200,"temp":59.2,"feels_like":57.02,"pressure":1011,"humidity":47,"dew_point":38.57,"uvi":0,"clouds":51,"visibility":10000,"wind_speed":4.59,"wind_deg":218,"wind_gust":5.68,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04n"}],"pop":0},{"dt":1695214800,"temp":59.11,"feels_like":56.84,"pressure":1011,"humidity":45,"dew_point":37.18,"uvi":0,"clouds":0,"visibility":10000,"wind_speed":4.9,"wind_deg":213,"wind_gust":6.89,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1695218400,"temp":61.34,"feels_like":59.05,"pressure":1011,"humidity":40,"dew_point":36.64,"uvi":0.35,"clouds":0,"visibility":10000,"wind_speed":4.68,"wind_deg":210,"wind_gust":6.78,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1695222000,"temp":65.37,"feels_like":63.16,"pressure":1011,"humidity":33,"dew_point":35.55,"uvi":1.27,"clouds":0,"visibility":10000,"wind_speed":4.94,"wind_deg":211,"wind_gust":6.46,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1695225600,"temp":70.21,"feels_like":68.2,"pressure":1010,"humidity":27,"dew_point":34.34,"uvi":2.8,"clouds":0,"visibility":10000,"wind_speed":4.56,"wind_deg":203,"wind_gust":5.95,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1695229200,"temp":74.86,"feels_like":73.02,"pressure":1009,"humidity":21,"dew_point":32.63,"uvi":4.58,"clouds":0,"visibility":10000,"wind_speed":3.71,"wind_deg":186,"wind_gust":5.01,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1695232800,"temp":78.22,"feels_like":76.55,"pressure":1008,"humidity":17,"dew_point":29.23,"uvi":6.03,"clouds":0,"visibility":10000,"wind_speed":6.04,"wind_deg":151,"wind_gust":6.53,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1695236400,"temp":80.28,"feels_like":78.48,"pressure":1007,"humidity":14,"dew_point":27.45,"uvi":6.6,"clouds":39,"visibility":10000,"wind_speed":6.85,"wind_deg":148,"wind_gust":7.54,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03d"}],"pop":0},{"dt":1695240000,"temp":81.45,"feels_like":79.25,"pressure":1006,"humidity":13,"dew_point":26.8,"uvi":6.05,"clouds":25,"visibility":10000,"wind_speed":7.47,"wind_deg":141,"wind_gust":8.21,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03d"}],"pop":0},{"dt":1695243600,"temp":82.74,"feels_like":80.17,"pressure":1005,"humidity":13,"dew_point":25.93,"uvi":4.6,"clouds":21,"visibility":10000,"wind_speed":4.63,"wind_deg":164,"wind_gust":6.93,"weather":[{"id":801,"main":"Clouds","description":"few
+        clouds","icon":"02d"}],"pop":0},{"dt":1695247200,"temp":72.45,"feels_like":70.66,"pressure":1007,"humidity":27,"dew_point":36.18,"uvi":1.96,"clouds":41,"visibility":10000,"wind_speed":9.86,"wind_deg":277,"wind_gust":11.56,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03d"}],"pop":0},{"dt":1695250800,"temp":74.7,"feels_like":72.95,"pressure":1007,"humidity":23,"dew_point":33.91,"uvi":0.88,"clouds":53,"visibility":10000,"wind_speed":5.68,"wind_deg":318,"wind_gust":10.25,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04d"}],"pop":0.04},{"dt":1695254400,"temp":73.54,"feels_like":71.73,"pressure":1007,"humidity":24,"dew_point":34.68,"uvi":0.23,"clouds":61,"visibility":10000,"wind_speed":9.26,"wind_deg":86,"wind_gust":8.81,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04d"}],"pop":0.04},{"dt":1695258000,"temp":71.71,"feels_like":69.8,"pressure":1007,"humidity":26,"dew_point":34.93,"uvi":0,"clouds":95,"visibility":10000,"wind_speed":11.1,"wind_deg":158,"wind_gust":19.46,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}],"pop":0},{"dt":1695261600,"temp":70.63,"feels_like":68.76,"pressure":1008,"humidity":29,"dew_point":36.84,"uvi":0,"clouds":97,"visibility":10000,"wind_speed":7.34,"wind_deg":191,"wind_gust":15.1,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04n"}],"pop":0},{"dt":1695265200,"temp":69.37,"feels_like":67.51,"pressure":1008,"humidity":32,"dew_point":37.98,"uvi":0,"clouds":98,"visibility":10000,"wind_speed":4.43,"wind_deg":208,"wind_gust":9.19,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04n"}],"pop":0},{"dt":1695268800,"temp":67.64,"feels_like":65.75,"pressure":1009,"humidity":35,"dew_point":39.04,"uvi":0,"clouds":90,"visibility":10000,"wind_speed":3.04,"wind_deg":223,"wind_gust":4.34,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04n"}],"pop":0}],"daily":[{"dt":1695060000,"sunrise":1695041021,"sunset":1695085489,"moonrise":1695053580,"moonset":1695091440,"moon_phase":0.11,"temp":{"day":80.28,"min":62.6,"max":83.19,"night":63.43,"eve":78.39,"morn":63.1},"feels_like":{"day":78.57,"night":61.63,"eve":76.96,"morn":60.67},"pressure":1010,"humidity":16,"dew_point":30.13,"wind_speed":18.37,"wind_deg":177,"wind_gust":24.76,"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10d"}],"clouds":6,"pop":0.72,"rain":0.74,"uvi":6.68},{"dt":1695146400,"sunrise":1695127476,"sunset":1695171790,"moonrise":1695143940,"moonset":1695179580,"moon_phase":0.15,"temp":{"day":76.8,"min":60.91,"max":79.77,"night":62.73,"eve":60.91,"morn":62.17},"feels_like":{"day":75.16,"night":61.43,"eve":59.76,"morn":60.06},"pressure":1008,"humidity":21,"dew_point":34.14,"wind_speed":17.69,"wind_deg":306,"wind_gust":23.4,"weather":[{"id":501,"main":"Rain","description":"moderate
+        rain","icon":"10d"}],"clouds":46,"pop":0.64,"rain":3.29,"uvi":6.33},{"dt":1695232800,"sunrise":1695213931,"sunset":1695258090,"moonrise":1695234420,"moonset":1695268140,"moon_phase":0.18,"temp":{"day":78.22,"min":59.11,"max":82.74,"night":66.76,"eve":73.54,"morn":59.2},"feels_like":{"day":76.55,"night":64.83,"eve":71.73,"morn":57.02},"pressure":1008,"humidity":17,"dew_point":29.23,"wind_speed":11.1,"wind_deg":158,"wind_gust":19.46,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"clouds":0,"pop":0.32,"uvi":6.6},{"dt":1695319200,"sunrise":1695300387,"sunset":1695344390,"moonrise":1695324960,"moonset":1695357180,"moon_phase":0.21,"temp":{"day":76.24,"min":60.33,"max":83.12,"night":71.82,"eve":79.63,"morn":60.76},"feels_like":{"day":74.41,"night":69.93,"eve":79.63,"morn":58.28},"pressure":1009,"humidity":18,"dew_point":30.13,"wind_speed":13.78,"wind_deg":15,"wind_gust":16.78,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"clouds":0,"pop":0,"uvi":6.75},{"dt":1695405600,"sunrise":1695386843,"sunset":1695430691,"moonrise":1695415320,"moonset":1695447000,"moon_phase":0.25,"temp":{"day":71.85,"min":60.15,"max":79.95,"night":60.87,"eve":71.51,"morn":60.15},"feels_like":{"day":70.05,"night":58.68,"eve":69.58,"morn":57.74},"pressure":1008,"humidity":28,"dew_point":36.34,"wind_speed":17.29,"wind_deg":44,"wind_gust":18.03,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"clouds":0,"pop":0,"uvi":6.11},{"dt":1695492000,"sunrise":1695473298,"sunset":1695516991,"moonrise":1695505260,"moonset":0,"moon_phase":0.28,"temp":{"day":69.98,"min":56.53,"max":74.35,"night":60.94,"eve":73.74,"morn":56.53},"feels_like":{"day":67.66,"night":58.86,"eve":71.53,"morn":53.96},"pressure":1010,"humidity":21,"dew_point":28.22,"wind_speed":8.43,"wind_deg":28,"wind_gust":16.26,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"clouds":4,"pop":0.16,"uvi":7},{"dt":1695578400,"sunrise":1695559754,"sunset":1695603291,"moonrise":1695594660,"moonset":1695537360,"moon_phase":0.32,"temp":{"day":69.94,"min":55.99,"max":76.62,"night":68.41,"eve":76.62,"morn":55.99},"feels_like":{"day":67.39,"night":66.22,"eve":74.55,"morn":53.17},"pressure":1012,"humidity":16,"dew_point":21.52,"wind_speed":6.58,"wind_deg":146,"wind_gust":8.63,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"clouds":0,"pop":0.16,"uvi":7},{"dt":1695664800,"sunrise":1695646210,"sunset":1695689592,"moonrise":1695683520,"moonset":1695628320,"moon_phase":0.36,"temp":{"day":76.53,"min":58.75,"max":83.03,"night":71.2,"eve":80.47,"morn":58.75},"feels_like":{"day":74.35,"night":69.06,"eve":78.53,"morn":55.31},"pressure":1013,"humidity":10,"dew_point":15.51,"wind_speed":10.69,"wind_deg":175,"wind_gust":22.44,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"clouds":4,"pop":0,"uvi":7}]}'
+  recorded_at: Tue, 19 Sep 2023 05:12:22 GMT
+recorded_with: VCR 6.2.0
